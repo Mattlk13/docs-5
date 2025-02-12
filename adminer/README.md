@@ -14,26 +14,33 @@ WARNING:
 
 -->
 
+# **DEPRECATION NOTICE**
+
+Adminer is [no longer maintained (upstream)](https://www.youtube.com/watch?v=OrOtiu_nfHE&lc=Ugy8pAL8wgAL3_iKkzZ4AaABAg.9pj_kQ2rkuw9pp813OyHha):
+
+> I've stopped working on it but maybe I'll return to it some day.
+
+See also [TimWolla/docker-adminer#147](https://github.com/TimWolla/docker-adminer/issues/147). Users are strongly encouraged to seek alternatives.
+
 # Quick reference
 
 -	**Maintained by**:  
 	[Tim Düsterhus (of the Docker Community)](https://github.com/TimWolla/docker-adminer)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.8.1-standalone`, `4-standalone`, `standalone`, `4.8.1`, `4`, `latest`](https://github.com/TimWolla/docker-adminer/blob/655a0ba9445f62ee494bfe35be93e6730e7576af/4/Dockerfile)
--	[`4.8.1-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/655a0ba9445f62ee494bfe35be93e6730e7576af/4/fastcgi/Dockerfile)
+**No supported tags**
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/TimWolla/docker-adminer/issues](https://github.com/TimWolla/docker-adminer/issues)
+	[https://github.com/TimWolla/docker-adminer/issues](https://github.com/TimWolla/docker-adminer/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/adminer/), [`arm32v6`](https://hub.docker.com/r/arm32v6/adminer/), [`arm32v7`](https://hub.docker.com/r/arm32v7/adminer/), [`arm64v8`](https://hub.docker.com/r/arm64v8/adminer/), [`i386`](https://hub.docker.com/r/i386/adminer/), [`ppc64le`](https://hub.docker.com/r/ppc64le/adminer/), [`s390x`](https://hub.docker.com/r/s390x/adminer/)
+	**No supported architectures**
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/adminer/` directory](https://github.com/docker-library/repo-info/blob/master/repos/adminer) ([history](https://github.com/docker-library/repo-info/commits/master/repos/adminer))  
@@ -78,9 +85,9 @@ Then point your web server to port 9000 of the container.
 
 Note: This exposes the FastCGI socket to the Internet. Make sure to add proper firewall rules or use a private Docker network instead to prevent a direct access.
 
-### ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+### ... via [`docker-compose`](https://github.com/docker/compose) or [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/)
 
-Example `stack.yml` for `adminer`:
+Example `docker-compose.yml` for `adminer`:
 
 ```yaml
 # Use root/example as user/password credentials

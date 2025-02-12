@@ -20,17 +20,18 @@ WARNING:
 	The Dart Docker Team
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.16.1-sdk`, `2.16-sdk`, `2-sdk`, `stable-sdk`, `sdk`, `2.16.1`, `2.16`, `2`, `stable`, `latest`](https://github.com/dart-lang/dart-docker/blob/18d58b09b4cec74be929ce5bc53ce6515415c88a/stable/bullseye/Dockerfile)
--	[`2.17.0-69.2.beta-sdk`, `beta-sdk`, `2.17.0-69.2.beta`, `beta`](https://github.com/dart-lang/dart-docker/blob/18d58b09b4cec74be929ce5bc53ce6515415c88a/beta/bullseye/Dockerfile)
+-	[`3.7.0-sdk`, `3.7-sdk`, `3-sdk`, `stable-sdk`, `sdk`, `3.7.0`, `3.7`, `3`, `stable`, `latest`](https://github.com/dart-lang/dart-docker/blob/d114946ad0c5fa6feb95d0d3133d5acd66d322a7/stable/bookworm/Dockerfile)
+
+-	[`3.8.0-70.1.beta-sdk`, `beta-sdk`, `3.8.0-70.1.beta`, `beta`](https://github.com/dart-lang/dart-docker/blob/d114946ad0c5fa6feb95d0d3133d5acd66d322a7/beta/bookworm/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/dart-lang/dart-docker/issues](https://github.com/dart-lang/dart-docker/issues)
+	[https://github.com/dart-lang/dart-docker/issues](https://github.com/dart-lang/dart-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/dart/), [`arm32v7`](https://hub.docker.com/r/arm32v7/dart/), [`arm64v8`](https://hub.docker.com/r/arm64v8/dart/)

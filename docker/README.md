@@ -20,7 +20,7 @@ WARNING:
 	[Tianon (of the Docker Project)](https://github.com/docker-library/docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -28,26 +28,51 @@ WARNING:
 
 ## Simple Tags
 
--	[`20.10.13`, `20.10`, `20`, `latest`, `20.10.13-alpine3.15`](https://github.com/docker-library/docker/blob/39b574a3813ec7c3f82157639f03b7c2af925bb4/20.10/Dockerfile)
--	[`20.10.13-dind`, `20.10-dind`, `20-dind`, `dind`, `20.10.13-dind-alpine3.15`](https://github.com/docker-library/docker/blob/0efba9e3cd4537de89ba54de2ad8acc5e3b1759f/20.10/dind/Dockerfile)
--	[`20.10.13-dind-rootless`, `20.10-dind-rootless`, `20-dind-rootless`, `dind-rootless`](https://github.com/docker-library/docker/blob/39b574a3813ec7c3f82157639f03b7c2af925bb4/20.10/dind-rootless/Dockerfile)
--	[`20.10.13-git`, `20.10-git`, `20-git`, `git`](https://github.com/docker-library/docker/blob/387e351394bfad74bceebf8303c6c8e39c3d4ed4/20.10/git/Dockerfile)
--	[`20.10.13-windowsservercore-ltsc2022`, `20.10-windowsservercore-ltsc2022`, `20-windowsservercore-ltsc2022`, `windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/39b574a3813ec7c3f82157639f03b7c2af925bb4/20.10/windows/windowsservercore-ltsc2022/Dockerfile)
--	[`20.10.13-windowsservercore-1809`, `20.10-windowsservercore-1809`, `20-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/docker-library/docker/blob/39b574a3813ec7c3f82157639f03b7c2af925bb4/20.10/windows/windowsservercore-1809/Dockerfile)
+-	[`28.0.0-rc.1-cli`, `28-rc-cli`, `rc-cli`, `28.0.0-rc.1-cli-alpine3.21`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/cli/Dockerfile)
+
+-	[`28.0.0-rc.1-dind`, `28-rc-dind`, `rc-dind`, `28.0.0-rc.1-dind-alpine3.21`, `28.0.0-rc.1`, `28-rc`, `rc`, `28.0.0-rc.1-alpine3.21`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/dind/Dockerfile)
+
+-	[`28.0.0-rc.1-dind-rootless`, `28-rc-dind-rootless`, `rc-dind-rootless`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/dind-rootless/Dockerfile)
+
+-	[`28.0.0-rc.1-windowsservercore-ltsc2025`, `28-rc-windowsservercore-ltsc2025`, `rc-windowsservercore-ltsc2025`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/windows/windowsservercore-ltsc2025/Dockerfile)
+
+-	[`28.0.0-rc.1-windowsservercore-ltsc2022`, `28-rc-windowsservercore-ltsc2022`, `rc-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/windows/windowsservercore-ltsc2022/Dockerfile)
+
+-	[`28.0.0-rc.1-windowsservercore-1809`, `28-rc-windowsservercore-1809`, `rc-windowsservercore-1809`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/windows/windowsservercore-1809/Dockerfile)
+
+-	[`27.5.1-cli`, `27.5-cli`, `27-cli`, `cli`, `27.5.1-cli-alpine3.21`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/cli/Dockerfile)
+
+-	[`27.5.1-dind`, `27.5-dind`, `27-dind`, `dind`, `27.5.1-dind-alpine3.21`, `27.5.1`, `27.5`, `27`, `latest`, `27.5.1-alpine3.21`](https://github.com/docker-library/docker/blob/fbb79dd2512681b42f6f0a3a82543c29640b85ce/27/dind/Dockerfile)
+
+-	[`27.5.1-dind-rootless`, `27.5-dind-rootless`, `27-dind-rootless`, `dind-rootless`](https://github.com/docker-library/docker/blob/03ecb33955c16b34b7d52c7563f05c736f159875/27/dind-rootless/Dockerfile)
+
+-	[`27.5.1-windowsservercore-ltsc2025`, `27.5-windowsservercore-ltsc2025`, `27-windowsservercore-ltsc2025`, `windowsservercore-ltsc2025`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/windows/windowsservercore-ltsc2025/Dockerfile)
+
+-	[`27.5.1-windowsservercore-ltsc2022`, `27.5-windowsservercore-ltsc2022`, `27-windowsservercore-ltsc2022`, `windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/windows/windowsservercore-ltsc2022/Dockerfile)
+
+-	[`27.5.1-windowsservercore-1809`, `27.5-windowsservercore-1809`, `27-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/windows/windowsservercore-1809/Dockerfile)
 
 ## Shared Tags
 
--	`20.10.13-windowsservercore`, `20.10-windowsservercore`, `20-windowsservercore`, `windowsservercore`:
-	-	[`20.10.13-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/39b574a3813ec7c3f82157639f03b7c2af925bb4/20.10/windows/windowsservercore-ltsc2022/Dockerfile)
-	-	[`20.10.13-windowsservercore-1809`](https://github.com/docker-library/docker/blob/39b574a3813ec7c3f82157639f03b7c2af925bb4/20.10/windows/windowsservercore-1809/Dockerfile)
+-	`28.0.0-rc.1-windowsservercore`, `28-rc-windowsservercore`, `rc-windowsservercore`:
+
+	-	[`28.0.0-rc.1-windowsservercore-ltsc2025`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/windows/windowsservercore-ltsc2025/Dockerfile)
+	-	[`28.0.0-rc.1-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/windows/windowsservercore-ltsc2022/Dockerfile)
+	-	[`28.0.0-rc.1-windowsservercore-1809`](https://github.com/docker-library/docker/blob/b329937b7efdb0ef4a6724a461529e36770aecb6/28-rc/windows/windowsservercore-1809/Dockerfile)
+
+-	`27.5.1-windowsservercore`, `27.5-windowsservercore`, `27-windowsservercore`, `windowsservercore`:
+
+	-	[`27.5.1-windowsservercore-ltsc2025`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/windows/windowsservercore-ltsc2025/Dockerfile)
+	-	[`27.5.1-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/windows/windowsservercore-ltsc2022/Dockerfile)
+	-	[`27.5.1-windowsservercore-1809`](https://github.com/docker-library/docker/blob/9af9a06de75a33816897ae7285fcb5104c5d9f83/27/windows/windowsservercore-1809/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/docker/issues](https://github.com/docker-library/docker/issues)
+	[https://github.com/docker-library/docker/issues](https://github.com/docker-library/docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/docker/), [`arm64v8`](https://hub.docker.com/r/arm64v8/docker/), [`windows-amd64`](https://hub.docker.com/r/winamd64/docker/)
+	[`amd64`](https://hub.docker.com/r/amd64/docker/), [`arm32v6`](https://hub.docker.com/r/arm32v6/docker/), [`arm32v7`](https://hub.docker.com/r/arm32v7/docker/), [`arm64v8`](https://hub.docker.com/r/arm64v8/docker/), [`windows-amd64`](https://hub.docker.com/r/winamd64/docker/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/docker/` directory](https://github.com/docker-library/repo-info/blob/master/repos/docker) ([history](https://github.com/docker-library/repo-info/commits/master/repos/docker))  
@@ -290,8 +315,8 @@ $ docker exec -it some-docker docker-entrypoint.sh sh # using "docker-entrypoint
 
 Important note: There are several ways to store data used by applications that run in Docker containers. We encourage users of the `docker` images to familiarize themselves with the options available, including:
 
--	Let Docker manage the storage of your data [by writing to disk on the host system using its own internal volume management](https://docs.docker.com/engine/tutorials/dockervolumes/#adding-a-data-volume). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
--	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume). This places the files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
+-	Let Docker manage the storage of your data [by writing to disk on the host system using its own internal volume management](https://docs.docker.com/storage/volumes/). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
+-	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/storage/bind-mounts/). This places the files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
 
 The Docker documentation is a good starting point for understanding the different storage options and variations, and there are multiple blogs and forum postings that discuss and give advice in this area. We will simply show the basic procedure here for the latter option above:
 
@@ -314,12 +339,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `docker:<version>-windowsservercore`
 
-This image is based on [Windows Server Core (`microsoft/windowsservercore`)](https://hub.docker.com/r/microsoft/windowsservercore/). As such, it only works in places which that image does, such as Windows 10 Professional/Enterprise (Anniversary Edition) or Windows Server 2016.
-
-For information about how to get Docker running on Windows, please see the relevant "Quick Start" guide provided by Microsoft:
-
--	[Windows Server Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_server)
--	[Windows 10 Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_10)
+Unfortunately, Windows does not support nested containers, so this image variant only contains the client (intended for use against an existing Docker engine, ala `-v //./pipe/docker_engine://./pipe/docker_engine`).
 
 # License
 

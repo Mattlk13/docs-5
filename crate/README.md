@@ -24,13 +24,16 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.7.1`, `4.7`, `latest`](https://github.com/crate/docker-crate/blob/fcc1f12538fa6f6883fe0e59b51029551f9e175d/Dockerfile)
--	[`4.6.8`, `4.6`](https://github.com/crate/docker-crate/blob/a266c1ab25e45de59ac71f9de301d84a4782cc43/Dockerfile)
+-	[`5.9.9`, `5.9`, `latest`](https://github.com/crate/docker-crate/blob/5972d59d5a2521ad29ae2f3edd9edad2697e36be/Dockerfile)
+
+-	[`5.8.6`, `5.8`](https://github.com/crate/docker-crate/blob/b55d16afc32597fca2ee19a1b3e8803a98c1c946/Dockerfile)
+
+-	[`5.7.6`, `5.7`](https://github.com/crate/docker-crate/blob/93c9f0651b3513b57aa0dca19c0a084af25c3ab4/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/crate/docker-crate/issues](https://github.com/crate/docker-crate/issues)
+	[https://github.com/crate/docker-crate/issues](https://github.com/crate/docker-crate/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/crate/), [`arm64v8`](https://hub.docker.com/r/arm64v8/crate/)
@@ -46,7 +49,7 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `crate/` directory](https://github.com/docker-library/docs/tree/master/crate) ([history](https://github.com/docker-library/docs/commits/master/crate))
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/0d4ccc1c0a00a99c3302ffeb17831225cbba7863/crate/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/774acf9bf99ca29eded5cd50f0ba3f755716673d/crate/logo.svg?sanitize=true)
 
 # What Is CrateDB?
 

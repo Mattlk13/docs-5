@@ -24,15 +24,28 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.5`, `8`](https://github.com/oracle/container-images/blob/331914f83f6b5c3dd6f0d98cdda5a1593d685704/8/Dockerfile)
--	[`8-slim`](https://github.com/oracle/container-images/blob/331914f83f6b5c3dd6f0d98cdda5a1593d685704/8-slim/Dockerfile)
--	[`7.9`, `7`](https://github.com/oracle/container-images/blob/331914f83f6b5c3dd6f0d98cdda5a1593d685704/7/Dockerfile)
--	[`7-slim`](https://github.com/oracle/container-images/blob/331914f83f6b5c3dd6f0d98cdda5a1593d685704/7-slim/Dockerfile)
+-	[`9`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/9/Dockerfile)
+
+-	[`9-slim`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/9-slim/Dockerfile)
+
+-	[`9-slim-fips`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/9-slim-fips/Dockerfile)
+
+-	[`8.10`, `8`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/8/Dockerfile)
+
+-	[`8-slim`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/8-slim/Dockerfile)
+
+-	[`8-slim-fips`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/8-slim-fips/Dockerfile)
+
+-	[`7.9`, `7`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/7/Dockerfile)
+
+-	[`7-slim`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/7-slim/Dockerfile)
+
+-	[`7-slim-fips`](https://github.com/oracle/container-images/blob/8d25279f509bc37b1b79ec83e4dbe812bdc76831/7-slim-fips/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/oracle/container-images/issues](https://github.com/oracle/container-images/issues)
+	[https://github.com/oracle/container-images/issues](https://github.com/oracle/container-images/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/oraclelinux/), [`arm64v8`](https://hub.docker.com/r/arm64v8/oraclelinux/)
@@ -54,15 +67,13 @@ WARNING:
 
 Oracle Linux is an open-source operating system available under the GNU General Public License (GPLv2). Suitable for general purpose or Oracle workloads, it benefits from rigorous testing of more than 128,000 hours per day with real- world workloads and includes unique innovations such as Ksplice for zero- downtime kernel patching, DTrace for real-time diagnostics, the powerful Btrfs file system, and more.
 
-## Changelog
-
-Oracle maintains a [CHANGELOG](https://github.com/oracle/container-images/blob/main/CHANGELOG.md) that documents by release date the errata applied and any CVE(s) that are mitigated in each update to the official images.
+> **NOTE:** the `oraclelinux` image intentionally does *not* provide a `latest` tag. You must specify [an existing tag](https://hub.docker.com/_/oraclelinux?tab=tags) when referencing this image. See *"Removal of the `latest` tag"* below for further details.
 
 ## How to use these images
 
-The Oracle Linux images are intended for use in the **FROM** field of a downstream `Dockerfile`. For example, to use the latest optimized Oracle Linux 8 i mage, specify `FROM oraclelinux:8`.
+The Oracle Linux images are intended for use in the **FROM** field of a downstream `Dockerfile`. For example, to use the latest optimized Oracle Linux 8 image, specify `FROM oraclelinux:8`.
 
-### Removal of `latest` tag
+## Removal of `latest` tag
 
 The `latest` tag was removed from the Oracle Linux official images in June 2020 to avoid breaking any downstream images caused by backwards-incompatible changes introduced by the release of a new version. Downstream images must specify the version, i.e. `oraclelinux:7` or `oraclelinux:8`.
 
@@ -76,7 +87,11 @@ The `oraclelinux:8-slim` variant is intended primarily to provide "just enough u
 
 For images that want an Oracle Linux 7 user space, Oracle recommends using `oraclelinux:7-slim` as the base layer as it contains just enough packages for `yum` to be able to install more packages.
 
-The `oraclelinux:7` images is based on the package set of what would be installed on a bare-metal server when performing a Minimal install of Oracle Linux.
+The `oraclelinux:7` images is based on the package set of what would be installed on a bare-metal server when performing a minimal install of Oracle Linux.
+
+## Changelog
+
+Oracle maintains a [CHANGELOG](https://github.com/oracle/container-images/blob/main/CHANGELOG.md) that documents by release date the errata applied and any CVE(s) that are mitigated in each update to the official images.
 
 ## Official Resources
 

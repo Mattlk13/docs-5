@@ -20,17 +20,18 @@ WARNING:
 	[the Raku Community](https://github.com/Raku/docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `2021.04`](https://github.com/Raku/docker/blob/26de33ad42a6033cd105e354416c9aab3e7c91d1/2021.04/buster/Dockerfile)
--	[`alpine`, `2021.04-alpine`](https://github.com/Raku/docker/blob/26de33ad42a6033cd105e354416c9aab3e7c91d1/2021.04/alpine3.13/Dockerfile)
+-	[`latest`, `2024.12`, `bookworm`](https://github.com/Raku/docker/blob/5ee0f98efba56a1152775f861662c1774520aef9/2024.12/bookworm/Dockerfile)
+
+-	[`alpine`, `2024.12-alpine`](https://github.com/Raku/docker/blob/5ee0f98efba56a1152775f861662c1774520aef9/2024.12/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/Raku/docker/issues](https://github.com/Raku/docker/issues)
+	[https://github.com/Raku/docker/issues](https://github.com/Raku/docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/rakudo-star/), [`arm64v8`](https://hub.docker.com/r/arm64v8/rakudo-star/)
@@ -87,6 +88,8 @@ The `rakudo-star` images come in many flavors, each designed for a specific use 
 ## `rakudo-star:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+Some of these tags may have names like bookworm in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
 
 ## `rakudo-star:<version>-alpine`
 

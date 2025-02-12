@@ -20,18 +20,16 @@ WARNING:
 	[Plone Community](https://github.com/plone/plone.docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.2.7-python38`, `5.2-python38`, `5-python38`, `python38`, `5.2.7`, `5.2`, `5`, `latest`](https://github.com/plone/plone.docker/blob/a93b111b144ee7db61b7567926dfa3cee51d0960/5.2/5.2.7/debian/Dockerfile)
--	[`5.2.6-python38`, `5.2.6`](https://github.com/plone/plone.docker/blob/a93b111b144ee7db61b7567926dfa3cee51d0960/5.2/5.2.6/debian/Dockerfile)
--	[`5.2.5-python38`, `5.2.5`](https://github.com/plone/plone.docker/blob/a93b111b144ee7db61b7567926dfa3cee51d0960/5.2/5.2.5/debian/Dockerfile)
+-	[`5.2.14-python38`, `5.2-python38`, `5-python38`, `python38`, `5.2.14`, `5.2`, `5`, `latest`](https://github.com/plone/plone.docker/blob/a3a9c7e0c5ca324f488fe7354f00a997398195f7/5.2/5.2.14/debian/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/plone/plone.docker/issues](https://github.com/plone/plone.docker/issues)
+	[https://github.com/plone/plone.docker/issues](https://github.com/plone/plone.docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/plone/)

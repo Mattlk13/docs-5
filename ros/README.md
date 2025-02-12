@@ -20,35 +20,46 @@ WARNING:
 	[the Open Source Robotics Foundation](https://github.com/osrf/docker_images)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`melodic-ros-core`, `melodic-ros-core-bionic`](https://github.com/osrf/docker_images/blob/11c613986e35a1f36fd0fa18b49173e0c564cf1d/ros/melodic/ubuntu/bionic/ros-core/Dockerfile)
--	[`melodic-ros-base`, `melodic-ros-base-bionic`, `melodic`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/melodic/ubuntu/bionic/ros-base/Dockerfile)
--	[`melodic-robot`, `melodic-robot-bionic`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/melodic/ubuntu/bionic/robot/Dockerfile)
--	[`melodic-perception`, `melodic-perception-bionic`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/melodic/ubuntu/bionic/perception/Dockerfile)
--	[`noetic-ros-core`, `noetic-ros-core-focal`](https://github.com/osrf/docker_images/blob/11c613986e35a1f36fd0fa18b49173e0c564cf1d/ros/noetic/ubuntu/focal/ros-core/Dockerfile)
+-	[`noetic-ros-core`, `noetic-ros-core-focal`](https://github.com/osrf/docker_images/blob/27cc0b68263bbbb10bb58dd814efc0a6b0a01ec7/ros/noetic/ubuntu/focal/ros-core/Dockerfile)
+
 -	[`noetic-ros-base`, `noetic-ros-base-focal`, `noetic`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/noetic/ubuntu/focal/ros-base/Dockerfile)
+
 -	[`noetic-robot`, `noetic-robot-focal`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/noetic/ubuntu/focal/robot/Dockerfile)
+
 -	[`noetic-perception`, `noetic-perception-focal`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/noetic/ubuntu/focal/perception/Dockerfile)
--	[`noetic-ros-core-buster`](https://github.com/osrf/docker_images/blob/11c613986e35a1f36fd0fa18b49173e0c564cf1d/ros/noetic/debian/buster/ros-core/Dockerfile)
--	[`noetic-ros-base-buster`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/noetic/debian/buster/ros-base/Dockerfile)
--	[`noetic-robot-buster`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/noetic/debian/buster/robot/Dockerfile)
--	[`noetic-perception-buster`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/noetic/debian/buster/perception/Dockerfile)
--	[`foxy-ros-core`, `foxy-ros-core-focal`](https://github.com/osrf/docker_images/blob/11c613986e35a1f36fd0fa18b49173e0c564cf1d/ros/foxy/ubuntu/focal/ros-core/Dockerfile)
--	[`foxy-ros-base`, `foxy-ros-base-focal`, `foxy`, `latest`](https://github.com/osrf/docker_images/blob/df19ab7d5993d3b78a908362cdcd1479a8e78b35/ros/foxy/ubuntu/focal/ros-base/Dockerfile)
--	[`foxy-ros1-bridge`, `foxy-ros1-bridge-focal`](https://github.com/osrf/docker_images/blob/8c7ec280db9c754aa163e84bf70f4cbb902e69fb/ros/foxy/ubuntu/focal/ros1-bridge/Dockerfile)
--	[`galactic-ros-core`, `galactic-ros-core-focal`](https://github.com/osrf/docker_images/blob/11c613986e35a1f36fd0fa18b49173e0c564cf1d/ros/galactic/ubuntu/focal/ros-core/Dockerfile)
--	[`galactic-ros-base`, `galactic-ros-base-focal`, `galactic`](https://github.com/osrf/docker_images/blob/6511d8fc0754616550b7f5ea31a40084c2462938/ros/galactic/ubuntu/focal/ros-base/Dockerfile)
--	[`galactic-ros1-bridge`, `galactic-ros1-bridge-focal`](https://github.com/osrf/docker_images/blob/8c7ec280db9c754aa163e84bf70f4cbb902e69fb/ros/galactic/ubuntu/focal/ros1-bridge/Dockerfile)
--	[`rolling-ros-core`, `rolling-ros-core-jammy`](https://github.com/osrf/docker_images/blob/86029c8abad4b4e52d95a33af079bdb874fa0b0c/ros/rolling/ubuntu/jammy/ros-core/Dockerfile)
--	[`rolling-ros-base`, `rolling-ros-base-jammy`, `rolling`](https://github.com/osrf/docker_images/blob/86029c8abad4b4e52d95a33af079bdb874fa0b0c/ros/rolling/ubuntu/jammy/ros-base/Dockerfile)
+
+-	[`humble-ros-core`, `humble-ros-core-jammy`](https://github.com/osrf/docker_images/blob/27cc0b68263bbbb10bb58dd814efc0a6b0a01ec7/ros/humble/ubuntu/jammy/ros-core/Dockerfile)
+
+-	[`humble-ros-base`, `humble-ros-base-jammy`, `humble`](https://github.com/osrf/docker_images/blob/20e3ba685bb353a3c00be9ba01c1b7a6823c9472/ros/humble/ubuntu/jammy/ros-base/Dockerfile)
+
+-	[`humble-perception`, `humble-perception-jammy`](https://github.com/osrf/docker_images/blob/20d40c96b426b8956dec203e236abff2ec29b188/ros/humble/ubuntu/jammy/perception/Dockerfile)
+
+-	[`iron-ros-core`, `iron-ros-core-jammy`](https://github.com/osrf/docker_images/blob/27cc0b68263bbbb10bb58dd814efc0a6b0a01ec7/ros/iron/ubuntu/jammy/ros-core/Dockerfile)
+
+-	[`iron-ros-base`, `iron-ros-base-jammy`, `iron`](https://github.com/osrf/docker_images/blob/bca53bf4c09d771be3ff735da4157203b53ebc2b/ros/iron/ubuntu/jammy/ros-base/Dockerfile)
+
+-	[`iron-perception`, `iron-perception-jammy`](https://github.com/osrf/docker_images/blob/bca53bf4c09d771be3ff735da4157203b53ebc2b/ros/iron/ubuntu/jammy/perception/Dockerfile)
+
+-	[`jazzy-ros-core`, `jazzy-ros-core-noble`](https://github.com/osrf/docker_images/blob/74e321bc1837c29f223a6d54895aa3c8eb184119/ros/jazzy/ubuntu/noble/ros-core/Dockerfile)
+
+-	[`jazzy-ros-base`, `jazzy-ros-base-noble`, `jazzy`, `latest`](https://github.com/osrf/docker_images/blob/0038f1c3a11aa0fc573d698b39ab5c204aad5a40/ros/jazzy/ubuntu/noble/ros-base/Dockerfile)
+
+-	[`jazzy-perception`, `jazzy-perception-noble`](https://github.com/osrf/docker_images/blob/0038f1c3a11aa0fc573d698b39ab5c204aad5a40/ros/jazzy/ubuntu/noble/perception/Dockerfile)
+
+-	[`rolling-ros-core`, `rolling-ros-core-noble`](https://github.com/osrf/docker_images/blob/7f98ddd88d872299c45b60c8bcd70d4eb6665222/ros/rolling/ubuntu/noble/ros-core/Dockerfile)
+
+-	[`rolling-ros-base`, `rolling-ros-base-noble`, `rolling`](https://github.com/osrf/docker_images/blob/7f98ddd88d872299c45b60c8bcd70d4eb6665222/ros/rolling/ubuntu/noble/ros-base/Dockerfile)
+
+-	[`rolling-perception`, `rolling-perception-noble`](https://github.com/osrf/docker_images/blob/7f98ddd88d872299c45b60c8bcd70d4eb6665222/ros/rolling/ubuntu/noble/perception/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/osrf/docker_images/issues](https://github.com/osrf/docker_images/issues)
+	[https://github.com/osrf/docker_images/issues](https://github.com/osrf/docker_images/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/ros/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ros/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ros/)
@@ -88,7 +99,7 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 # launch ros package
-CMD ["ros2", "launch", "demo_nodes_cpp", "talker_listener.launch.py"]
+CMD ["ros2", "launch", "demo_nodes_cpp", "talker_listener_launch.py"]
 ```
 
 Note: all ROS images include a default entrypoint that sources the ROS environment setup before executing the configured command, in this case the demo packages launch file. You can then build and run the Docker image like so:
@@ -168,7 +179,7 @@ RUN sed --in-place --expression \
       /ros_entrypoint.sh
 
 # run launch file
-CMD ["ros2", "launch", "demo_nodes_cpp", "talker_listener.launch.py"]
+CMD ["ros2", "launch", "demo_nodes_cpp", "talker_listener_launch.py"]
 ```
 
 The example above starts by using [`vcstool`](https://github.com/dirk-thomas/vcstool) to clone source repos of interest into the cacher stage. One could similarly `COPY` code from the local build context into the source directory as well. Package manifest files are then cached in a temporary directory where the following builder stage may copy from to install necessary dependencies with [`rosdep`](https://github.com/ros-infrastructure/rosdep). This is done prior to copying the rest of the source files to preserve the multi-stage build cache, given unaltered manifests do not alter declared dependencies, saving time and bandwidth. The overlay is then built using [`colcon`](https://colcon.readthedocs.io/en/released/), the entrypoint updated to source the workspace, and the default command set to launch the demo.
@@ -271,7 +282,7 @@ $ docker-compose rm
 
 ### ROS 1 Bridge
 
-To ease ROS 2 migration, [`ros1_bridge`](https://index.ros.org/p/ros1_bridge/github-ros2-ros1_bridge) is a ROS 2 package that provides bidirectional communication between ROS 1 and ROS 2. As a minimal example, given the ROS 2 Dockerfile above, we'll create the ROS 1 equivalent below, and name the Dockerfile appropriately.
+To ease ROS 2 migration, [`ros1_bridge`](https://index.ros.org/p/ros1_bridge) is a ROS 2 package that provides bidirectional communication between ROS 1 and ROS 2. As a minimal example, given the ROS 2 Dockerfile above, we'll create the ROS 1 equivalent below, and name the Dockerfile appropriately.
 
 ```dockerfile
 FROM ros:noetic
@@ -283,7 +294,7 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 # launch ros package
-CMD ["roslaunch", "roscpp_tutorials", "talker_listener.launch"]
+CMD ["roslaunch", "roscpp_tutorials", "talker_listener_launch"]
 ```
 
 The compose file bellow spawns services for both talker listener demos while connecting the two via a dynamic bridge. You may then view the log output from both pairs of talker and listener nodes cross talking over the `/chatter` topic.
@@ -316,12 +327,12 @@ services:
 [Q&A](https://answers.ros.org/questions/): Ask questions. Get answers  
 [Forums](https://discourse.ros.org/): Hear the latest discussions  
 [Blog](http://www.ros.org/news/): Stay up-to-date  
-[Packages](https://index.ros.org/packages/): Discover indexed packages  
+[Packages](https://index.ros.org/?search_packages=true): Discover indexed packages  
 [OSRF](https://www.osrfoundation.org/): Open Source Robotics Foundation
 
 ## ROS 2
 
-[Index](https://index.ros.org/doc/ros2/): ROS 2 Documentation  
+[Index](https://docs.ros.org): ROS 2 Documentation  
 [Design](https://design.ros2.org/): ROS 2 Design Articles
 
 ## ROS 1

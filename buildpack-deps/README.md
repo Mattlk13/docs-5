@@ -20,45 +20,68 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/buildpack-deps)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`bookworm-curl`, `testing-curl`](https://github.com/docker-library/buildpack-deps/blob/84e7e46026131a108a6480e5ed2969e8acf2d4e2/debian/bookworm/curl/Dockerfile)
--	[`bookworm-scm`, `testing-scm`](https://github.com/docker-library/buildpack-deps/blob/84e7e46026131a108a6480e5ed2969e8acf2d4e2/debian/bookworm/scm/Dockerfile)
--	[`bookworm`, `testing`](https://github.com/docker-library/buildpack-deps/blob/84e7e46026131a108a6480e5ed2969e8acf2d4e2/debian/bookworm/Dockerfile)
--	[`bullseye-curl`, `stable-curl`, `curl`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/debian/bullseye/curl/Dockerfile)
--	[`bullseye-scm`, `stable-scm`, `scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/bullseye/scm/Dockerfile)
--	[`bullseye`, `stable`, `latest`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/bullseye/Dockerfile)
--	[`buster-curl`, `oldstable-curl`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/debian/buster/curl/Dockerfile)
--	[`buster-scm`, `oldstable-scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/buster/scm/Dockerfile)
--	[`buster`, `oldstable`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/buster/Dockerfile)
--	[`sid-curl`, `unstable-curl`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/debian/sid/curl/Dockerfile)
--	[`sid-scm`, `unstable-scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/sid/scm/Dockerfile)
--	[`sid`, `unstable`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/sid/Dockerfile)
--	[`stretch-curl`, `oldoldstable-curl`](https://github.com/docker-library/buildpack-deps/blob/93d2a6f64abe6787b7dd25c7d5322af1fa2e3f55/debian/stretch/curl/Dockerfile)
--	[`stretch-scm`, `oldoldstable-scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/stretch/scm/Dockerfile)
--	[`stretch`, `oldoldstable`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/debian/stretch/Dockerfile)
--	[`bionic-curl`, `18.04-curl`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/ubuntu/bionic/curl/Dockerfile)
--	[`bionic-scm`, `18.04-scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/ubuntu/bionic/scm/Dockerfile)
--	[`bionic`, `18.04`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/ubuntu/bionic/Dockerfile)
--	[`focal-curl`, `20.04-curl`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/ubuntu/focal/curl/Dockerfile)
--	[`focal-scm`, `20.04-scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/ubuntu/focal/scm/Dockerfile)
--	[`focal`, `20.04`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/ubuntu/focal/Dockerfile)
--	[`impish-curl`, `21.10-curl`](https://github.com/docker-library/buildpack-deps/blob/fae040f3db68991f178f0a9631a03ca9837f5647/ubuntu/impish/curl/Dockerfile)
--	[`impish-scm`, `21.10-scm`](https://github.com/docker-library/buildpack-deps/blob/fae040f3db68991f178f0a9631a03ca9837f5647/ubuntu/impish/scm/Dockerfile)
--	[`impish`, `21.10`](https://github.com/docker-library/buildpack-deps/blob/fae040f3db68991f178f0a9631a03ca9837f5647/ubuntu/impish/Dockerfile)
--	[`jammy-curl`, `22.04-curl`](https://github.com/docker-library/buildpack-deps/blob/e2fc735283ba4e96efc3e4acf2b74bc3eccbf327/ubuntu/jammy/curl/Dockerfile)
--	[`jammy-scm`, `22.04-scm`](https://github.com/docker-library/buildpack-deps/blob/e2fc735283ba4e96efc3e4acf2b74bc3eccbf327/ubuntu/jammy/scm/Dockerfile)
--	[`jammy`, `22.04`](https://github.com/docker-library/buildpack-deps/blob/e2fc735283ba4e96efc3e4acf2b74bc3eccbf327/ubuntu/jammy/Dockerfile)
--	[`xenial-curl`, `16.04-curl`](https://github.com/docker-library/buildpack-deps/blob/93d2a6f64abe6787b7dd25c7d5322af1fa2e3f55/ubuntu/xenial/curl/Dockerfile)
--	[`xenial-scm`, `16.04-scm`](https://github.com/docker-library/buildpack-deps/blob/65d69325ad741cea6dee20781c1faaab2e003d87/ubuntu/xenial/scm/Dockerfile)
--	[`xenial`, `16.04`](https://github.com/docker-library/buildpack-deps/blob/98a5ab81d47a106c458cdf90733df0ee8beea06c/ubuntu/xenial/Dockerfile)
+-	[`bookworm-curl`, `stable-curl`, `curl`](https://github.com/docker-library/buildpack-deps/blob/3e18c3af1f5dce6a48abf036857f9097b6bd79cc/debian/bookworm/curl/Dockerfile)
+
+-	[`bookworm-scm`, `stable-scm`, `scm`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/debian/bookworm/scm/Dockerfile)
+
+-	[`bookworm`, `stable`, `latest`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/debian/bookworm/Dockerfile)
+
+-	[`bullseye-curl`, `oldstable-curl`](https://github.com/docker-library/buildpack-deps/blob/93d6db0797f91ab674535553b7e0e762941a02d0/debian/bullseye/curl/Dockerfile)
+
+-	[`bullseye-scm`, `oldstable-scm`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/debian/bullseye/scm/Dockerfile)
+
+-	[`bullseye`, `oldstable`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/debian/bullseye/Dockerfile)
+
+-	[`sid-curl`, `unstable-curl`](https://github.com/docker-library/buildpack-deps/blob/2b3a8b7d1f8875865034be3bab98ddd737e37d5e/debian/sid/curl/Dockerfile)
+
+-	[`sid-scm`, `unstable-scm`](https://github.com/docker-library/buildpack-deps/blob/2b3a8b7d1f8875865034be3bab98ddd737e37d5e/debian/sid/scm/Dockerfile)
+
+-	[`sid`, `unstable`](https://github.com/docker-library/buildpack-deps/blob/2b3a8b7d1f8875865034be3bab98ddd737e37d5e/debian/sid/Dockerfile)
+
+-	[`trixie-curl`, `testing-curl`](https://github.com/docker-library/buildpack-deps/blob/1f4fe499c668d9a2e1578aa8db4f0b2d14482cf5/debian/trixie/curl/Dockerfile)
+
+-	[`trixie-scm`, `testing-scm`](https://github.com/docker-library/buildpack-deps/blob/1f4fe499c668d9a2e1578aa8db4f0b2d14482cf5/debian/trixie/scm/Dockerfile)
+
+-	[`trixie`, `testing`](https://github.com/docker-library/buildpack-deps/blob/1f4fe499c668d9a2e1578aa8db4f0b2d14482cf5/debian/trixie/Dockerfile)
+
+-	[`focal-curl`, `20.04-curl`](https://github.com/docker-library/buildpack-deps/blob/93d6db0797f91ab674535553b7e0e762941a02d0/ubuntu/focal/curl/Dockerfile)
+
+-	[`focal-scm`, `20.04-scm`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/ubuntu/focal/scm/Dockerfile)
+
+-	[`focal`, `20.04`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/ubuntu/focal/Dockerfile)
+
+-	[`jammy-curl`, `22.04-curl`](https://github.com/docker-library/buildpack-deps/blob/93d6db0797f91ab674535553b7e0e762941a02d0/ubuntu/jammy/curl/Dockerfile)
+
+-	[`jammy-scm`, `22.04-scm`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/ubuntu/jammy/scm/Dockerfile)
+
+-	[`jammy`, `22.04`](https://github.com/docker-library/buildpack-deps/blob/d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae/ubuntu/jammy/Dockerfile)
+
+-	[`noble-curl`, `24.04-curl`](https://github.com/docker-library/buildpack-deps/blob/60dc5f9555c521de086b2f5770514faf69ee2cc4/ubuntu/noble/curl/Dockerfile)
+
+-	[`noble-scm`, `24.04-scm`](https://github.com/docker-library/buildpack-deps/blob/60dc5f9555c521de086b2f5770514faf69ee2cc4/ubuntu/noble/scm/Dockerfile)
+
+-	[`noble`, `24.04`](https://github.com/docker-library/buildpack-deps/blob/60dc5f9555c521de086b2f5770514faf69ee2cc4/ubuntu/noble/Dockerfile)
+
+-	[`oracular-curl`, `24.10-curl`](https://github.com/docker-library/buildpack-deps/blob/f24f02bc0fda57d7f0e30b205df4a38114712b0a/ubuntu/oracular/curl/Dockerfile)
+
+-	[`oracular-scm`, `24.10-scm`](https://github.com/docker-library/buildpack-deps/blob/f24f02bc0fda57d7f0e30b205df4a38114712b0a/ubuntu/oracular/scm/Dockerfile)
+
+-	[`oracular`, `24.10`](https://github.com/docker-library/buildpack-deps/blob/f24f02bc0fda57d7f0e30b205df4a38114712b0a/ubuntu/oracular/Dockerfile)
+
+-	[`plucky-curl`, `25.04-curl`](https://github.com/docker-library/buildpack-deps/blob/ab3ae04e943ecb240a9691dfa1de219b4a3e32a0/ubuntu/plucky/curl/Dockerfile)
+
+-	[`plucky-scm`, `25.04-scm`](https://github.com/docker-library/buildpack-deps/blob/ab3ae04e943ecb240a9691dfa1de219b4a3e32a0/ubuntu/plucky/scm/Dockerfile)
+
+-	[`plucky`, `25.04`](https://github.com/docker-library/buildpack-deps/blob/ab3ae04e943ecb240a9691dfa1de219b4a3e32a0/ubuntu/plucky/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/buildpack-deps/issues](https://github.com/docker-library/buildpack-deps/issues)
+	[https://github.com/docker-library/buildpack-deps/issues](https://github.com/docker-library/buildpack-deps/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/buildpack-deps/), [`arm32v5`](https://hub.docker.com/r/arm32v5/buildpack-deps/), [`arm32v7`](https://hub.docker.com/r/arm32v7/buildpack-deps/), [`arm64v8`](https://hub.docker.com/r/arm64v8/buildpack-deps/), [`i386`](https://hub.docker.com/r/i386/buildpack-deps/), [`mips64le`](https://hub.docker.com/r/mips64le/buildpack-deps/), [`ppc64le`](https://hub.docker.com/r/ppc64le/buildpack-deps/), [`riscv64`](https://hub.docker.com/r/riscv64/buildpack-deps/), [`s390x`](https://hub.docker.com/r/s390x/buildpack-deps/)

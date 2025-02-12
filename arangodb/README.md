@@ -20,21 +20,21 @@ WARNING:
 	[ArangoDB](https://github.com/arangodb/arangodb-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.7`, `3.7.17`](https://github.com/arangodb/arangodb-docker/blob/df34e6d0c1bb3a70c3537669d482c329a1a14128/alpine/3.7.17/Dockerfile)
--	[`3.8`, `3.8.6`](https://github.com/arangodb/arangodb-docker/blob/af354ba85e29e2bee525677b45a321530235a38d/alpine/3.8.6/Dockerfile)
--	[`3.9`, `3.9.0`, `latest`](https://github.com/arangodb/arangodb-docker/blob/de7e9211691614f105c7809cb13405ef5afa0be8/alpine/3.9.0/Dockerfile)
+-	[`3.11`, `3.11.12`](https://github.com/arangodb/arangodb-docker/blob/de481d822b675af548d17ec1a448fe7dbee97641/alpine/3.11.12_alpine-3.18/Dockerfile)
+
+-	[`3.12`, `3.12.4`, `latest`](https://github.com/arangodb/arangodb-docker/blob/1c6635050356d0645ed247ee69f3736007a54e27/alpine/3.12.4/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/arangodb/arangodb-docker/issues](https://github.com/arangodb/arangodb-docker/issues)
+	[https://github.com/arangodb/arangodb-docker/issues](https://github.com/arangodb/arangodb-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/arangodb/)
+	[`amd64`](https://hub.docker.com/r/amd64/arangodb/), [`arm64v8`](https://hub.docker.com/r/arm64v8/arangodb/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/arangodb/` directory](https://github.com/docker-library/repo-info/blob/master/repos/arangodb) ([history](https://github.com/docker-library/repo-info/commits/master/repos/arangodb))  
@@ -49,32 +49,26 @@ WARNING:
 
 # What is ArangoDB?
 
-ArangoDB is a multi-model, open-source database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query language or JavaScript extensions. Use ACID transactions if you require them. Scale horizontally and vertically with a few mouse clicks.
+ArangoDB is a scalable graph database system to drive value from connected data, faster. Native graphs, an integrated search engine, and JSON support, via a single query language.
 
-ArangoDB runs everywhere: On-prem, in the cloud and also on [ArangoDB's Cloud Service Oasis](https://cloud.arangodb.com/home).
-
-The supported data models can be mixed in queries and allow ArangoDB to be the aggregation point for your data.
+ArangoDB runs everywhere: On-prem, in the cloud, and as a managed cloud service: [ArangoGraph Insights Platform](https://cloud.arangodb.com/home).
 
 > [arangodb.com](https://arangodb.com)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/788ad3d196c4f69bd73801812abcab7707f70101/arangodb/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/f528ddab3310590b87273e2dbb75b96e081cadbe/arangodb/logo.png)
 
 ## Key Features in ArangoDB
 
-**Multi-Model** Documents, graphs and key-value pairs — model your data as you see fit for your application.
+**Native Graph** Store both data and relationships, for faster queries even with multiple levels of joins and deeper insights that simply aren't possible with traditional relational and document database systems.
 
-**Joins** Conveniently join what belongs together for flexible ad-hoc querying, less data redundancy.
+**Document Store** Every node in your graph is a JSON document: flexible, extensible, and easily imported from your existing document database.
 
-**Transactions** Easy application development keeping your data consistent and safe. No hassle in your client.
-
-Joins and Transactions are key features for flexible, secure data designs, widely used in RDBMSs that you won't want to miss in NoSQL products. You decide how and when to use Joins and strong consistency guarantees, keeping all the power for scaling and performance as choice.
-
-Furthermore, ArangoDB offers a microservice framework called [Foxx](https://www.arangodb.com/why-arangodb/foxx) to build your own Rest API with a few lines of code.
+**ArangoSearch** Natively integrated cross-platform indexing, text-search and ranking engine for information retrieval, optimized for speed and memory.
 
 #### ArangoDB Documentation
 
--	[ArangoDB Documentation](https://www.arangodb.com/documentation)
--	[ArangoDB Tutorials](https://www.arangodb.com/tutorials)
+-	[Learn ArangoDB](https://arangodb.com/learn/)
+-	[Documentation](https://docs.arangodb.com/)
 
 ## How to use this image
 
@@ -83,26 +77,44 @@ Furthermore, ArangoDB offers a microservice framework called [Foxx](https://www.
 In order to start an ArangoDB instance, run:
 
 ```console
-unix> docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 -d --name arangodb-instance arangodb
+docker run -d -p 8529:8529 -e ARANGO_RANDOM_ROOT_PASSWORD=1 --name arangodb-instance arangodb
 ```
 
-Will create and launch the arangodb docker instance as background process. The Identifier of the process is printed. By default ArangoDB listen on port 8529 for request and the image includes `EXPOSE 8529`. If you link an application container it is automatically available in the linked container. See the following examples.
-
-In order to get the IP arango listens on, run:
+Docker chooses the processor architecture for the image that matches your host CPU by default. If this is not the case, for example, because you have the `DOCKER_DEFAULT_PLATFORM` environment variable set to a different architecture, you can pass the `--platform` flag to the `docker run` command to specify the appropriate operating system and architecture for the container. For x86-64, use `linux/amd64`. On ARM, especially Apple silicon with no emulation for the required AVX instruction set extension, use `linux/arm64/v8`:
 
 ```console
-unix> docker inspect --format '{{ .NetworkSettings.IPAddress }}' arangodb-instance
+docker run -d -p 8529:8529 -e ARANGO_RANDOM_ROOT_PASSWORD=1 --name arangodb-instance --platform linux/arm64/v8 arangodb
 ```
+
+This creates and launches the arangodb Docker instance as a background process. The Identifier of the process is printed. By default, ArangoDB listens on port `8529` for requests.
+
+In order to get the IP ArangoDB listens on, run:
+
+```console
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' arangodb-instance
+```
+
+### Initialize the server language
+
+When using Docker, you need to specify the language you want to initialize the server to on the first run in one of the following ways:
+
+-	Set the environment variable `LANG` to a locale in the `docker run` command, e.g. `-e LANG=sv` for a Swedish locale.
+
+-	Use an `arangod.conf` configuration file that sets a language and mount it into the container. For example, create a configuration file on your host system in which you set `icu-language = sv` at the top (before any `[section]`) and then mount the file over the default configuration file like `docker run -v /your-host-path/arangod.conf:/etc/arangodb3/arangod.conf ...`.
+
+Note that you cannot set the language using only a startup option on the command-line, like `docker run ... arangodb --icu-language sv`.
+
+If you don't specify a language explicitly, the default is `en_US` up to ArangoDB v3.11 and `en_US_POSIX` from ArangoDB v3.12 onward.
 
 ### Using the instance
 
-In order to use the running instance from an application, link the container:
+To use the running instance from an application, link the container:
 
 ```console
-unix> docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 --name my-app --link arangodb-instance:db-link arangodb
+docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 --name my-app --link arangodb-instance:db-link arangodb
 ```
 
-This will use the instance with the name `arangodb-instance` and link it into the application container. The application container will contain environment variables
+This uses the instance named `arangodb-instance` and links it into the application container. The application container contains environment variables, which can be used to access the database.
 
 	DB_LINK_PORT_8529_TCP=tcp://172.17.0.17:8529
 	DB_LINK_PORT_8529_TCP_ADDR=172.17.0.17
@@ -110,14 +122,12 @@ This will use the instance with the name `arangodb-instance` and link it into th
 	DB_LINK_PORT_8529_TCP_PROTO=tcp
 	DB_LINK_NAME=/naughty_ardinghelli/db-link
 
-These can be used to access the database.
-
 ### Exposing the port to the outside world
 
 If you want to expose the port to the outside world, run:
 
 ```console
-unix> docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 -p 8529:8529 -d arangodb
+docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 -p 8529:8529 -d arangodb
 ```
 
 ArangoDB listen on port 8529 for request and the image includes `EXPOSE
@@ -148,7 +158,7 @@ Note: this way of specifying logins only applies to single server installations.
 You can pass arguments to the ArangoDB server by appending them to the end of the Docker command:
 
 ```console
-unix> docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 arangodb --help
+docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 arangodb --help
 ```
 
 The entrypoint script starts the `arangod` binary by default and forwards your arguments.
@@ -156,13 +166,18 @@ The entrypoint script starts the `arangod` binary by default and forwards your a
 You may also start other binaries, such as the ArangoShell:
 
 ```console
-unix> docker run -it arangodb arangosh --server.database myDB ...
+docker run -it arangodb arangosh --server.database myDB ...
 ```
 
 Note that you need to set up networking for containers if `arangod` runs in one container and you want to access it with `arangosh` running in another container. It is easier to execute it in the same container instead. Use `docker ps` to find out the container ID / name of a running container:
 
 ```console
-unix> docker ps
+docker ps
+```
+
+It prints something similar to the following:
+
+```console
 CONTAINER ID   IMAGE     COMMAND                 CREATED      STATUS      PORTS                   NAMES
 1234567890ab   arangodb  "/entrypoint.sh aran…"  2 hours ago  Up 2 hours  0.0.0.0:8529->8529/tcp  jolly_joker
 ```
@@ -170,10 +185,10 @@ CONTAINER ID   IMAGE     COMMAND                 CREATED      STATUS      PORTS 
 Then use `docker exec` and the ID / name to run something inside of the existing container:
 
 ```console
-unix> docker exec -it jolly_joker arangosh
+docker exec -it jolly_joker arangosh
 ```
 
-See more information about [Configuration](https://www.arangodb.com/docs/stable/administration-configuration.html)
+For more information, see the ArangoDB documentation about [Configuration](https://docs.arangodb.com/stable/operations/administration/configuration/).
 
 ### Limiting resource utilization
 
@@ -204,7 +219,7 @@ ArangoDB supports two different storage engines from version 3.2 to 3.6. You can
 
 ArangoDB uses the volume `/var/lib/arangodb3` as database directory to store the collection data and the volume `/var/lib/arangodb3-apps` as apps directory to store any extensions. These directories are marked as docker volumes.
 
-See `docker inspect --format "{{ .Config.Volumes}}" arangodb` for all volumes.
+See `docker inspect --format "{{ .Config.Volumes }}" arangodb` for all volumes.
 
 A good explanation about persistence and docker container can be found here: [Docker In-depth: Volumes](http://container42.com/2014/11/03/docker-indepth-volumes/), [Why Docker Data Containers are Good](https://medium.com/@ramangupta/why-docker-data-containers-are-good-589b3c6c749e)
 
@@ -215,8 +230,8 @@ You can map the container's volumes to a directory on the host, so that the data
 ```console
 unix> mkdir /tmp/arangodb
 unix> docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 -p 8529:8529 -d \
-          -v /tmp/arangodb:/var/lib/arangodb3 \
-          arangodb
+        -v /tmp/arangodb:/var/lib/arangodb3 \
+        arangodb
 ```
 
 This will use the `/tmp/arangodb` directory of the host as database directory for ArangoDB inside the container.
@@ -226,34 +241,40 @@ This will use the `/tmp/arangodb` directory of the host as database directory fo
 Alternatively you can create a container holding the data.
 
 ```console
-unix> docker create --name arangodb-persist arangodb true
+docker create --name arangodb-persist arangodb true
 ```
 
 And use this data container in your ArangoDB container.
 
 ```console
-unix> docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 --volumes-from arangodb-persist -p 8529:8529 arangodb
+docker run -e ARANGO_RANDOM_ROOT_PASSWORD=1 --volumes-from arangodb-persist -p 8529:8529 arangodb
 ```
 
 If want to save a few bytes you can alternatively use [busybox](https://hub.docker.com/_/busybox) or [alpine](https://hub.docker.com/_/alpine) for creating the volume only containers. Please note that you need to provide the used volumes in this case. For example
 
 ```console
-unix> docker run -d --name arangodb-persist -v /var/lib/arangodb3 busybox true
+docker run -d --name arangodb-persist -v /var/lib/arangodb3 busybox true
 ```
 
-### Using as a base image
+### Usage as a base image
 
-If you are using the image as a base image please make sure to wrap any CMD in the [exec](https://docs.docker.com/engine/reference/builder/#cmd) form. Otherwise the default entrypoint will not do its bootstrapping work.
+If you are using the image as a base image please make sure to wrap any CMD in the [exec](https://docs.docker.com/reference/dockerfile/#cmd) form. Otherwise the default entrypoint will not do its bootstrapping work.
 
 When deriving the image, you can control the instantiation via putting files into `/docker-entrypoint-initdb.d/`.
 
 -	`*.sh` - files ending with .sh will be run as a bash shellscript.
 -	`*.js` - files will be executed with arangosh. You can specify additional arangosh arguments via the `ARANGOSH_ARGS` environment variable.
--	`dumps/` - in this directory you can place subdirectories containing database dumps generated using [arangodump](https://www.arangodb.com/docs/stable/programs-arangodump.html). They can be restored using [arangorestore](https://www.arangodb.com/docs/stable/programs-arangorestore.html).
+-	`dumps/` - in this directory you can place subdirectories containing database dumps generated using [arangodump](https://docs.arangodb.com/stable/components/tools/arangodump/). They can be restored using [arangorestore](https://docs.arangodb.com/stable/components/tools/arangorestore/).
 
 # License
 
-[ArangoDB itself is licensed under the Apache License](https://github.com/arangodb/arangodb/blob/devel/LICENSE), but it contains [software of third parties under their respective licenses](https://github.com/arangodb/arangodb/blob/devel/LICENSES-OTHER-COMPONENTS.md).
+The official Docker images of the ArangoDB Community Edition are governed by the [ArangoDB Community License](https://arangodb.com/community-license/). The use for commercial purposes is limited to a 100 GB on dataset size in production within a single cluster and a maximum of three clusters.
+
+The source code of the Community Edition is available under the [Business Source License 1.1 (BUSL-1.1)](https://github.com/arangodb/arangodb/blob/devel/LICENSE). Copying, modification, redistribution, non-commercial use, and commercial use in a non-production context are always allowed. Additionally, you can deploy BUSL-licensed ArangoDB source code for any purpose (including production) as long as you are not creating a commercial derivative work or offering, or are including it in a commercial product, application, or service. On the fourth anniversary of the first publicly available distribution of a specific version, the license changes to the permissive Apache 2.0 open-source license.
+
+Up to ArangoDB version 3.11, ArangoDB is licensed under the [Apache 2.0 License](https://github.com/arangodb/arangodb/blob/3.11/LICENSE).
+
+ArangoDB contains [software of third parties under their respective licenses](https://github.com/arangodb/arangodb/blob/devel/LICENSES-OTHER-COMPONENTS.md).
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 

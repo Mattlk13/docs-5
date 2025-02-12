@@ -44,9 +44,9 @@ $ docker run --name some-%%REPO%% \
   -d %%REPO%%
 ```
 
-## ... via [`docker-compose`](https://github.com/docker/compose)
+## ... via [Docker Compose](https://github.com/docker/compose)
 
-Example `docker-compose.yml` for `%%REPO%%`:
+Example `compose.yaml` for `%%REPO%%`:
 
 ```yaml
 %%REPO%%:
@@ -63,10 +63,9 @@ db:
     MYSQL_PASSWORD: %%REPO%%
     MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     MYSQL_DATABASE: %%REPO%%
-
 ```
 
-Run `docker-compose up`, wait for it to initialize completely, and visit `http://localhost:8080` or `http://host-ip:8080`.
+Run `docker compose up`, wait for it to initialize completely, and visit `http://localhost:8080` or `http://host-ip:8080`.
 
 ## Adding additional libraries / extensions
 

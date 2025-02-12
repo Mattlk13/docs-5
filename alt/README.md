@@ -20,13 +20,15 @@ WARNING:
 	[The ALT Linux Team Cloud](https://github.com/alt-cloud/docker-brew-alt)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`p10`, `latest`](https://github.com/alt-cloud/docker-brew-alt/blob/88cc4c773b98eaf79a02f5e939c894892d9b2381/x86_64/Dockerfile)
--	[`p9`](https://github.com/alt-cloud/docker-brew-alt/blob/f077885abfbffce43ead72f9a7e543738c3b5c29/x86_64/Dockerfile)
--	[`sisyphus`](https://github.com/alt-cloud/docker-brew-alt/blob/ae311abdba430479ce3104461f2607e7866baf4e/x86_64/Dockerfile)
+-	[`p10`, `latest`](https://github.com/alt-cloud/docker-brew-alt/blob/fa2dd8158cb2fae6f6beb1b75ce521a906defdb6/x86_64/Dockerfile)
+
+-	[`sisyphus`](https://github.com/alt-cloud/docker-brew-alt/blob/22fa2c4589ddd9a413c483e03258a8e337dfe195/x86_64/Dockerfile)
+
+-	[`p11`](https://github.com/alt-cloud/docker-brew-alt/blob/c2d543714938d5ab0d474f584e0b11b527e08943/x86_64/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -36,7 +38,7 @@ WARNING:
 For create new bug, please use [ALT's bugzilla page](https://bugzilla.altlinux.org/enter_bug.cgi?product=Docker) (choose `Official image` as component and include details about image problems in the description) or [GitHub](https://github.com/alt-cloud/docker-brew-alt/issues).
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/alt/), [`arm32v7`](https://hub.docker.com/r/arm32v7/alt/), [`arm64v8`](https://hub.docker.com/r/arm64v8/alt/), [`i386`](https://hub.docker.com/r/i386/alt/), [`ppc64le`](https://hub.docker.com/r/ppc64le/alt/)
+	[`amd64`](https://hub.docker.com/r/amd64/alt/), [`arm64v8`](https://hub.docker.com/r/arm64v8/alt/), [`i386`](https://hub.docker.com/r/i386/alt/), [`riscv64`](https://hub.docker.com/r/riscv64/alt/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/alt/` directory](https://github.com/docker-library/repo-info/blob/master/repos/alt) ([history](https://github.com/docker-library/repo-info/commits/master/repos/alt))  
