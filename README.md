@@ -4,7 +4,7 @@ This repository contains the image documentation for each of the Docker Official
 
 All Markdown files here are run through [tianon's fork of `markdownfmt`](https://github.com/tianon/markdownfmt), and verified as formatted correctly via GitHub Actions.
 
--	[![GitHub CI status badge](https://img.shields.io/github/workflow/status/docker-library/docs/GitHub%20CI/master?label=GitHub%20CI)](https://github.com/docker-library/docs/actions?query=workflow%3A%22GitHub+CI%22+branch%3Amaster)
+-	[![GitHub CI status badge](https://img.shields.io/github/actions/workflow/status/docker-library/docs/ci.yml?branch=master&label=GitHub%20CI)](https://github.com/docker-library/docs/actions?query=workflow%3A%22GitHub+CI%22+branch%3Amaster)
 -	[![library update.sh status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/docs/job/library.svg?label=Automated%20library%20update.sh)](https://doi-janky.infosiftr.net/job/docs/job/library/)
 	-	[![amd64 update.sh status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/docs/job/amd64.svg?label=Automated%20amd64%20update.sh)](https://doi-janky.infosiftr.net/job/docs/job/amd64/)
 	-	[![arm32v5 update.sh status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/docs/job/arm32v5.svg?label=Automated%20arm32v5%20update.sh)](https://doi-janky.infosiftr.net/job/docs/job/arm32v5/)
@@ -33,8 +33,9 @@ All Markdown files here are run through [tianon's fork of `markdownfmt`](https:/
 	6.	[`license.md`](#licensemd)
 	7.	[`logo.png`](#logopng)
 	8.	[`maintainer.md`](#maintainermd)
-	9.	[`README-short.txt`](#readme-shorttxt)
-	10.	[`stack.yml`](#stackyml)
+	9.	[`metadata.json`](#metadatajson)
+	10.	[`README-short.txt`](#readme-shorttxt)
+	11.	[`stack.yml`](#stackyml)
 5.	[Files for main Docs repo](#files-for-main-docs-repo)
 	1.	[`update.sh`](#updatesh)
 	2.	[`markdownfmt.sh` and `ymlfmt.sh`](#markdownfmtsh-and-ymlfmtsh)
@@ -55,20 +56,21 @@ After opening your Pull Request the changes will be checked by an automated `mar
 
 # How do I add a new image's docs
 
--	create a folder for my image: `mkdir myimage`
--	create a `README-short.txt` (required, 100 char max)
--	create a `content.md` (required)
--	create a `license.md` (required)
--	create a `maintainer.md` (required)
--	create a `github-repo` (required)
--	add a `logo.png` (recommended)
+-	Create a folder for my image: `mkdir myimage`
+-	Create a `README-short.txt` (required, 100 char max)
+-	Create a `content.md` (required)
+-	Create a `license.md` (required)
+-	Create a `maintainer.md` (required)
+-	Create a `github-repo` (required)
+-	Create a `metadata.json` (required)
+-	Add a `logo.png` (recommended)
 
 Optionally:
 
--	run `./markdownfmt.sh -l myimage` to list any files that are non-compliant to [`tianon/markdownfmt`](https://hub.docker.com/r/tianon/markdownfmt).  
+-	Run `./markdownfmt.sh -l myimage` to list any files that are non-compliant to [`tianon/markdownfmt`](https://hub.docker.com/r/tianon/markdownfmt).  
 	Any files in the list will result in a failed build during continuous integration.
 	-	run `./markdownfmt.sh -d myimage` to see a diff of changes required to pass.
--	run `./update.sh myimage` to generate `myimage/README.md` for manual review of the generated copy.  
+-	Run `./update.sh myimage` to generate `myimage/README.md` for manual review of the generated copy.  
 	**Note:** do not actually commit the `README.md` file; it is automatically generated/committed before being uploaded to Docker Hub.
 
 # Files related to an image's docs
@@ -128,6 +130,18 @@ The image is automatically scaled to a 120 pixel square for the top of the Docke
 
 This file should contain a link to the maintainers of the Dockerfile.
 
+## `metadata.json`
+
+This file contains data about the repo for Docker Hub. The minimum file is defined below. `./metadata.sh [repo-name]` must be used to correctly format it (use `-w` to apply its suggested format changes). Only three sorted unique Docker Hub categories are allowed. `metadata.json` in the root contains the list of categories to choose from. See descriptions for the categories on the [Docker docs site](https://docs.docker.com/docker-hub/repos/categories/).
+
+```json
+{
+    "hub": {
+         "categories": []
+    }
+}
+```
+
 ## `README-short.txt`
 
 This is the short description for the Docker Hub, limited to 100 characters in a single line.
@@ -146,7 +160,7 @@ The file must work via `docker stack deploy` since that is how Play with Docker 
 
 This is the main script used to generate the `README.md` files for each image. The generated file is committed along with the files used to generate it. Accepted arguments are which image(s) you want to update or no arguments to update all of them.
 
-This script assumes [`bashbrew`](https://github.com/docker-library/official-images/tree/81e90ca8dcec892ade7eb348cba5a4a5d6851e17/bashbrew) is in your `PATH` (for scraping relevant tag information from the library manifest file for each repository).
+This script assumes [`bashbrew`](https://github.com/docker-library/bashbrew/releases) is in your `PATH` (for scraping relevant tag information from the library manifest file for each repository).
 
 ## `markdownfmt.sh` and `ymlfmt.sh`
 
@@ -164,7 +178,7 @@ The scripts and Markdown files in here are used in building an image's `README.m
 
 ## `generate-repo-stub-readme.sh`
 
-This is used to generate a simple `README.md` to put in the image's repo. We use this in Git repositories within https://github.com/docker-library to simplify our maintenance, but it is not required for anyone else. Argument is the name of the image, like `golang` and it then outputs the readme to standard out.
+This is used to generate a simple `README.md` to put in the image's repo. We use this in Git repositories within https://github.com/docker-library to simplify our maintenance, but it is not required for anyone else. The only argument is the name of the image (or repo), like `golang` and it then outputs the readme to standard out.
 
 ## `push.pl` and `push.sh`
 

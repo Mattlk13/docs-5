@@ -20,26 +20,45 @@ WARNING:
 	[the NGINX Docker Maintainers](https://github.com/nginxinc/docker-nginx)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.21.6`, `mainline`, `1`, `1.21`, `latest`](https://github.com/nginxinc/docker-nginx/blob/6f0396c1e06837672698bc97865ffcea9dc841d5/mainline/debian/Dockerfile)
--	[`1.21.6-perl`, `mainline-perl`, `1-perl`, `1.21-perl`, `perl`](https://github.com/nginxinc/docker-nginx/blob/6f0396c1e06837672698bc97865ffcea9dc841d5/mainline/debian-perl/Dockerfile)
--	[`1.21.6-alpine`, `mainline-alpine`, `1-alpine`, `1.21-alpine`, `alpine`](https://github.com/nginxinc/docker-nginx/blob/6f0396c1e06837672698bc97865ffcea9dc841d5/mainline/alpine/Dockerfile)
--	[`1.21.6-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.21-alpine-perl`, `alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/6f0396c1e06837672698bc97865ffcea9dc841d5/mainline/alpine-perl/Dockerfile)
--	[`1.20.2`, `stable`, `1.20`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/debian/Dockerfile)
--	[`1.20.2-perl`, `stable-perl`, `1.20-perl`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/debian-perl/Dockerfile)
--	[`1.20.2-alpine`, `stable-alpine`, `1.20-alpine`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/alpine/Dockerfile)
--	[`1.20.2-alpine-perl`, `stable-alpine-perl`, `1.20-alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/alpine-perl/Dockerfile)
+-	[`1.27.4`, `mainline`, `1`, `1.27`, `latest`, `1.27.4-bookworm`, `mainline-bookworm`, `1-bookworm`, `1.27-bookworm`, `bookworm`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/debian/Dockerfile)
+
+-	[`1.27.4-perl`, `mainline-perl`, `1-perl`, `1.27-perl`, `perl`, `1.27.4-bookworm-perl`, `mainline-bookworm-perl`, `1-bookworm-perl`, `1.27-bookworm-perl`, `bookworm-perl`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/debian-perl/Dockerfile)
+
+-	[`1.27.4-otel`, `mainline-otel`, `1-otel`, `1.27-otel`, `otel`, `1.27.4-bookworm-otel`, `mainline-bookworm-otel`, `1-bookworm-otel`, `1.27-bookworm-otel`, `bookworm-otel`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/debian-otel/Dockerfile)
+
+-	[`1.27.4-alpine`, `mainline-alpine`, `1-alpine`, `1.27-alpine`, `alpine`, `1.27.4-alpine3.21`, `mainline-alpine3.21`, `1-alpine3.21`, `1.27-alpine3.21`, `alpine3.21`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/alpine/Dockerfile)
+
+-	[`1.27.4-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.27-alpine-perl`, `alpine-perl`, `1.27.4-alpine3.21-perl`, `mainline-alpine3.21-perl`, `1-alpine3.21-perl`, `1.27-alpine3.21-perl`, `alpine3.21-perl`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/alpine-perl/Dockerfile)
+
+-	[`1.27.4-alpine-slim`, `mainline-alpine-slim`, `1-alpine-slim`, `1.27-alpine-slim`, `alpine-slim`, `1.27.4-alpine3.21-slim`, `mainline-alpine3.21-slim`, `1-alpine3.21-slim`, `1.27-alpine3.21-slim`, `alpine3.21-slim`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/alpine-slim/Dockerfile)
+
+-	[`1.27.4-alpine-otel`, `mainline-alpine-otel`, `1-alpine-otel`, `1.27-alpine-otel`, `alpine-otel`, `1.27.4-alpine3.21-otel`, `mainline-alpine3.21-otel`, `1-alpine3.21-otel`, `1.27-alpine3.21-otel`, `alpine3.21-otel`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/mainline/alpine-otel/Dockerfile)
+
+-	[`1.26.3`, `stable`, `1.26`, `1.26.3-bookworm`, `stable-bookworm`, `1.26-bookworm`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/debian/Dockerfile)
+
+-	[`1.26.3-perl`, `stable-perl`, `1.26-perl`, `1.26.3-bookworm-perl`, `stable-bookworm-perl`, `1.26-bookworm-perl`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/debian-perl/Dockerfile)
+
+-	[`1.26.3-otel`, `stable-otel`, `1.26-otel`, `1.26.3-bookworm-otel`, `stable-bookworm-otel`, `1.26-bookworm-otel`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/debian-otel/Dockerfile)
+
+-	[`1.26.3-alpine`, `stable-alpine`, `1.26-alpine`, `1.26.3-alpine3.20`, `stable-alpine3.20`, `1.26-alpine3.20`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/alpine/Dockerfile)
+
+-	[`1.26.3-alpine-perl`, `stable-alpine-perl`, `1.26-alpine-perl`, `1.26.3-alpine3.20-perl`, `stable-alpine3.20-perl`, `1.26-alpine3.20-perl`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/alpine-perl/Dockerfile)
+
+-	[`1.26.3-alpine-slim`, `stable-alpine-slim`, `1.26-alpine-slim`, `1.26.3-alpine3.20-slim`, `stable-alpine3.20-slim`, `1.26-alpine3.20-slim`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/alpine-slim/Dockerfile)
+
+-	[`1.26.3-alpine-otel`, `stable-alpine-otel`, `1.26-alpine-otel`, `1.26.3-alpine3.20-otel`, `stable-alpine3.20-otel`, `1.26-alpine3.20-otel`](https://github.com/nginxinc/docker-nginx/blob/cffeb933620093bc0c08c0b28c3d5cbaec79d729/stable/alpine-otel/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/nginxinc/docker-nginx/issues](https://github.com/nginxinc/docker-nginx/issues)
+	[https://github.com/nginxinc/docker-nginx/issues](https://github.com/nginxinc/docker-nginx/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/nginx/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nginx/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nginx/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nginx/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nginx/), [`i386`](https://hub.docker.com/r/i386/nginx/), [`mips64le`](https://hub.docker.com/r/mips64le/nginx/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nginx/), [`s390x`](https://hub.docker.com/r/s390x/nginx/)
+	[`amd64`](https://hub.docker.com/r/amd64/nginx/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nginx/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nginx/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nginx/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nginx/), [`i386`](https://hub.docker.com/r/i386/nginx/), [`mips64le`](https://hub.docker.com/r/mips64le/nginx/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nginx/), [`riscv64`](https://hub.docker.com/r/riscv64/nginx/), [`s390x`](https://hub.docker.com/r/s390x/nginx/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nginx/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nginx) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nginx))  
@@ -75,9 +94,10 @@ FROM nginx
 COPY static-html-directory /usr/share/nginx/html
 ```
 
-Place this file in the same directory as your directory of content ("static-html-directory"), run `docker build -t some-content-nginx .`, then start your container:
+Place this file in the same directory as your directory of content ("static-html-directory"), then run these commands to build and start your container:
 
 ```console
+$ docker build -t some-content-nginx .
 $ docker run --name some-nginx -d some-content-nginx
 ```
 
@@ -89,23 +109,27 @@ $ docker run --name some-nginx -d -p 8080:80 some-content-nginx
 
 Then you can hit `http://localhost:8080` or `http://host-ip:8080` in your browser.
 
-## Complex configuration
+## Customize configuration
+
+You can mount your configuration file, or build a new image with it.
+
+If you wish to adapt the default configuration, use something like the following to get it from a running nginx container:
+
+```console
+$ docker run --rm --entrypoint=cat nginx /etc/nginx/nginx.conf > /host/path/nginx.conf
+```
+
+And then edit `/host/path/nginx.conf` in your host file system.
+
+For information on the syntax of the nginx configuration files, see [the official documentation](http://nginx.org/en/docs/) (specifically the [Beginner's Guide](http://nginx.org/en/docs/beginners_guide.html#conf_structure)).
+
+### Mount your configuration file
 
 ```console
 $ docker run --name my-custom-nginx-container -v /host/path/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
 ```
 
-For information on the syntax of the nginx configuration files, see [the official documentation](http://nginx.org/en/docs/) (specifically the [Beginner's Guide](http://nginx.org/en/docs/beginners_guide.html#conf_structure)).
-
-If you wish to adapt the default configuration, use something like the following to copy it from a running nginx container:
-
-```console
-$ docker run --name tmp-nginx-container -d nginx
-$ docker cp tmp-nginx-container:/etc/nginx/nginx.conf /host/path/nginx.conf
-$ docker rm -f tmp-nginx-container
-```
-
-This can also be accomplished more cleanly using a simple `Dockerfile` (in `/host/path/`):
+### Build a new image with your configuration file
 
 ```dockerfile
 FROM nginx
@@ -164,7 +188,7 @@ This behavior can be changed via the following environment variables:
 
 ## Running nginx in read-only mode
 
-To run nginx in read-only mode, you will need to mount a Docker volume to every location where nginx writes information. The default nginx configuration requires write access to `/var/cache` and `/var/run`. This can be easily accomplished by running nginx as follows:
+To run nginx in read-only mode, you will need to mount a Docker volume to every location where nginx writes information. The default nginx configuration requires write access to `/var/cache/nginx` and `/var/run`. This can be easily accomplished by running nginx as follows:
 
 ```console
 $ docker run -d -p 80:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run nginx
@@ -244,6 +268,8 @@ The `nginx` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
+Some of these tags may have names like bookworm in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
+
 ## `nginx:<version>-perl` / `nginx:<version>-alpine-perl`
 
 Starting with nginx:1.13.0 / mainline and nginx:1.12.0 / stable, the perl module has been removed from the default images. A separate `-perl` tag variant is available if you wish to use the perl module.
@@ -255,6 +281,10 @@ This image is based on the popular [Alpine Linux project](https://alpinelinux.or
 This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+
+## `nginx:<version>-slim`
+
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `nginx`. Unless you are working in an environment where *only* the `nginx` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

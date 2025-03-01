@@ -20,12 +20,15 @@ WARNING:
 	Arch Linux trusted users [Santiago Torres-Arias](https://www.archlinux.org/people/trusted-users/#sangy), [Christian Rebischke](https://www.archlinux.org/people/trusted-users/#shibumi) and [Justin Kromlinger](https://www.archlinux.org/people/trusted-users/#hashworks) as well as Arch Linux developer [Pierre Schmitz](https://www.archlinux.org/people/developers/#pierre).
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `base`, `base-20220313.0.50300`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/8b4b4e25f0fcd46a492412bd3ddbe6736312d54a/Dockerfile.base)
--	[`base-devel`, `base-devel-20220313.0.50300`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/8b4b4e25f0fcd46a492412bd3ddbe6736312d54a/Dockerfile.base-devel)
+-	[`latest`, `base`, `base-20250223.0.312761`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/95b9dc8ea7fafbd4dc823c665b2f676c1e1240c9/Dockerfile.base)
+
+-	[`base-devel`, `base-devel-20250223.0.312761`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/95b9dc8ea7fafbd4dc823c665b2f676c1e1240c9/Dockerfile.base-devel)
+
+-	[`multilib-devel`, `multilib-devel-20250223.0.312761`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/95b9dc8ea7fafbd4dc823c665b2f676c1e1240c9/Dockerfile.multilib-devel)
 
 # Quick reference (cont.)
 
@@ -58,18 +61,18 @@ Our strong community is diverse and helpful, and we pride ourselves on the range
 
 # About this image
 
-The root filesystem tarball for this image is auto-generated weekly at 00:00 UTC on Sunday in Arch Linux infrastructure. Given the rolling-release nature of Arch Linux, images are tagged with the included package group / meta package and the timestamp of the date they were generated. For example, `archlinux:base-20201101.0.7893` was generated the First of November 2020 in [CI job #7893](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/jobs/7893). The `latest` tag will always match the latest `base` tag.
+The root filesystem tarball for this image is auto-generated weekly at 00:00 UTC on Sunday in Arch Linux infrastructure. Given the rolling-release nature of Arch Linux, images are tagged with the included meta package and the timestamp of the date they were generated. For example, `archlinux:base-20201101.0.7893` was generated the First of November 2020 in [CI job #7893](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/jobs/7893). The `latest` tag will always match the latest `base` tag.
 
-Besides `base` we also provide images for the `base-devel` package group.
+Besides `base` we also provide images for the `base-devel` and `multilib-devel` meta packages.
 
 This image is intended to serve the following goals:
 
 -	Provide the Arch experience in a Docker Image
--	Provide simplest but complete image to base every other upon
+-	Provide simplest but complete image to `base`, `base-devel` and `multilib-devel` on a regular basis
 -	`pacman` needs to work out of the box
 -	All installed packages have to be kept unmodified
 
-> ⚠️⚠️⚠️ NOTE: For Security Reasons, these images strip the pacman lsign key. This is because the same key would be spread to all containers of the same image, allowing for malicious actors to inject packages (via, for example, a man-in-the-middle). In order to create an lsign-key run `pacman-key --init` on the first execution, but be careful to not redistribute that key. ⚠️⚠️⚠️
+> ⚠️⚠️⚠️ NOTE: For Security Reasons, these images strip the pacman lsign key. This is because the same key would be spread to all containers of the same image, allowing for malicious actors to inject packages (via, for example, a man-in-the-middle). In order to create a lsign-key run `pacman-key --init` on the first execution, but be careful to not redistribute that key. ⚠️⚠️⚠️
 
 ## Availability
 

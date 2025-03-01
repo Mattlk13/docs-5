@@ -20,23 +20,30 @@ WARNING:
 	[InfluxData](https://github.com/influxdata/influxdata-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.6`, `1.6.2`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.6/Dockerfile)
--	[`1.6-alpine`, `1.6.2-alpine`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.6/alpine/Dockerfile)
--	[`1.7`, `1.7.17`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.7/Dockerfile)
--	[`1.7-alpine`, `1.7.17-alpine`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.7/alpine/Dockerfile)
--	[`1.8`, `1.8.10`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.8/Dockerfile)
--	[`1.8-alpine`, `1.8.10-alpine`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.8/alpine/Dockerfile)
--	[`1.9`, `1.9.3`, `latest`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.9/Dockerfile)
--	[`1.9-alpine`, `1.9.3-alpine`, `alpine`](https://github.com/influxdata/influxdata-docker/blob/81001d722f5092b67932604a896cf9bcf948cf9c/chronograf/1.9/alpine/Dockerfile)
+-	[`1.7`, `1.7.17`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.7/Dockerfile)
+
+-	[`1.7-alpine`, `1.7.17-alpine`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.7/alpine/Dockerfile)
+
+-	[`1.8`, `1.8.10`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.8/Dockerfile)
+
+-	[`1.8-alpine`, `1.8.10-alpine`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.8/alpine/Dockerfile)
+
+-	[`1.9`, `1.9.4`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.9/Dockerfile)
+
+-	[`1.9-alpine`, `1.9.4-alpine`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.9/alpine/Dockerfile)
+
+-	[`1.10`, `1.10.5`, `latest`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.10/Dockerfile)
+
+-	[`1.10-alpine`, `1.10.5-alpine`, `alpine`](https://github.com/influxdata/influxdata-docker/blob/0854be83296d30acd6e2b75f106f026cb051cbda/chronograf/1.10/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/influxdata/influxdata-docker/issues](https://github.com/influxdata/influxdata-docker/issues)
+	[https://github.com/influxdata/influxdata-docker/issues](https://github.com/influxdata/influxdata-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/chronograf/), [`arm32v7`](https://hub.docker.com/r/arm32v7/chronograf/), [`arm64v8`](https://hub.docker.com/r/arm64v8/chronograf/)
@@ -54,7 +61,7 @@ WARNING:
 
 # Chronograf
 
-Chronograf is InfluxData’s open source web application. Use Chronograf with the other components of the [TICK](https://www.influxdata.com/products/) stack for infrastructure monitoring, alert management, data visualization, and database management.
+Chronograf is InfluxData's open source web application. Use Chronograf with the other components of the [TICK](https://www.influxdata.com/products/) stack for infrastructure monitoring, alert management, data visualization, and database management.
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/43d87118415bb75d7bb107683e79cd6d69186f67/chronograf/logo.png)
 
@@ -113,6 +120,10 @@ $ docker run -p 8888:8888 \
 ```
 
 Try combining this with Telegraf to get dashboards for your infrastructure within minutes!
+
+#### Running as root
+
+Starting in v1.10.5, Chronograf no longer run as the root user by default. If a user wants to revert this change they can set `CHRONOGRAF_AS_ROOT=true` as an environment variable.
 
 ## Official Documentation
 

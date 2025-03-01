@@ -24,12 +24,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8-jre`, `jre`, `8`, `latest`](https://github.com/ibmruntimes/ci.docker/blob/d6605301b9ff5c0a38d2684d2ca559a5c0cb76ff/ibmjava/8/jre/ubuntu/Dockerfile)
--	[`8-jre-alpine`, `jre-alpine`](https://github.com/ibmruntimes/ci.docker/blob/d6605301b9ff5c0a38d2684d2ca559a5c0cb76ff/ibmjava/8/jre/alpine/Dockerfile)
--	[`8-sfj`, `sfj`](https://github.com/ibmruntimes/ci.docker/blob/d6605301b9ff5c0a38d2684d2ca559a5c0cb76ff/ibmjava/8/sfj/ubuntu/Dockerfile)
--	[`8-sfj-alpine`, `sfj-alpine`](https://github.com/ibmruntimes/ci.docker/blob/d6605301b9ff5c0a38d2684d2ca559a5c0cb76ff/ibmjava/8/sfj/alpine/Dockerfile)
--	[`8-sdk`, `sdk`](https://github.com/ibmruntimes/ci.docker/blob/d6605301b9ff5c0a38d2684d2ca559a5c0cb76ff/ibmjava/8/sdk/ubuntu/Dockerfile)
--	[`8-sdk-alpine`, `sdk-alpine`](https://github.com/ibmruntimes/ci.docker/blob/d6605301b9ff5c0a38d2684d2ca559a5c0cb76ff/ibmjava/8/sdk/alpine/Dockerfile)
+-	[`8-jre`, `jre`, `8`, `latest`](https://github.com/ibmruntimes/ci.docker/blob/00a17cb73f516a49cd3c0aae3d92c9fd9c74f7aa/ibmjava/8/jre/ubuntu/Dockerfile)
+
+-	[`8-sfj`, `sfj`](https://github.com/ibmruntimes/ci.docker/blob/00a17cb73f516a49cd3c0aae3d92c9fd9c74f7aa/ibmjava/8/sfj/ubuntu/Dockerfile)
+
+-	[`8-sdk`, `sdk`](https://github.com/ibmruntimes/ci.docker/blob/00a17cb73f516a49cd3c0aae3d92c9fd9c74f7aa/ibmjava/8/sdk/ubuntu/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -37,7 +36,7 @@ WARNING:
 	[GitHub](https://github.com/ibmruntimes/ci.docker/issues); for troubleshooting, see our [How Do I ...?](http://www.ibm.com/developerworks/java/jdk/howdoi/) page
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/ibmjava/), [`i386`](https://hub.docker.com/r/i386/ibmjava/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ibmjava/), [`s390x`](https://hub.docker.com/r/s390x/ibmjava/)
+	[`amd64`](https://hub.docker.com/r/amd64/ibmjava/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ibmjava/), [`s390x`](https://hub.docker.com/r/s390x/ibmjava/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/ibmjava/` directory](https://github.com/docker-library/repo-info/blob/master/repos/ibmjava) ([history](https://github.com/docker-library/repo-info/commits/master/repos/ibmjava))  
@@ -156,22 +155,6 @@ docker run -it --volumes-from classcache japp
 ### See Also
 
 See the [Websphere-Liberty image](https://hub.docker.com/_/websphere-liberty/), which builds on top of this IBM docker image for Java.
-
-# Image Variants
-
-The `ibmjava` images come in many flavors, each designed for a specific use case.
-
-## `ibmjava:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `ibmjava:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

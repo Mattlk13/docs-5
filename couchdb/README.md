@@ -20,21 +20,23 @@ WARNING:
 	[Apache CouchDB](https://github.com/apache/couchdb-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `3.2.1`, `3.2`, `3`](https://github.com/apache/couchdb-docker/blob/4dc3a6b1f2bd8d46489cad5828912f0a64bf0b36/3.2.1/Dockerfile)
--	[`3.1.2`, `3.1`](https://github.com/apache/couchdb-docker/blob/4dc3a6b1f2bd8d46489cad5828912f0a64bf0b36/3.1.2/Dockerfile)
--	[`2.3.1`, `2.3`, `2`](https://github.com/apache/couchdb-docker/blob/4dc3a6b1f2bd8d46489cad5828912f0a64bf0b36/2.3.1/Dockerfile)
+-	[`latest`, `3.4.2`, `3.4`, `3`](https://github.com/apache/couchdb-docker/blob/734c61f2a9421637ff58be225665477be52dd4b7/3.4.2/Dockerfile)
+
+-	[`3.4.2-nouveau`, `3.4-nouveau`, `3-nouveau`](https://github.com/apache/couchdb-docker/blob/734c61f2a9421637ff58be225665477be52dd4b7/3.4.2-nouveau/Dockerfile)
+
+-	[`3.3.3`, `3.3`](https://github.com/apache/couchdb-docker/blob/734c61f2a9421637ff58be225665477be52dd4b7/3.3.3/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/apache/couchdb-docker/issues](https://github.com/apache/couchdb-docker/issues)
+	[https://github.com/apache/couchdb-docker/issues](https://github.com/apache/couchdb-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/couchdb/), [`arm64v8`](https://hub.docker.com/r/arm64v8/couchdb/), [`ppc64le`](https://hub.docker.com/r/ppc64le/couchdb/)
+	[`amd64`](https://hub.docker.com/r/amd64/couchdb/), [`arm64v8`](https://hub.docker.com/r/arm64v8/couchdb/), [`ppc64le`](https://hub.docker.com/r/ppc64le/couchdb/), [`s390x`](https://hub.docker.com/r/s390x/couchdb/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/couchdb/` directory](https://github.com/docker-library/repo-info/blob/master/repos/couchdb) ([history](https://github.com/docker-library/repo-info/commits/master/repos/couchdb))  
@@ -61,7 +63,7 @@ Store your data safely, on your own servers, or with any leading cloud provider.
 
 ## Start a CouchDB instance
 
-Starting a CouchDB instantce is simple:
+Starting a CouchDB instance is simple:
 
 ```console
 $ docker run -d --name my-couchdb couchdb:tag
@@ -138,8 +140,8 @@ In addition, a few environment variables are provided to set very common paramet
 
 Important note: There are several ways to store data used by applications that run in Docker containers. We encourage users of the `couchdb` images to familiarize themselves with the options available, including:
 
--	Let Docker manage the storage of your database data [by writing the database files to disk on the host system using its own internal volume management](https://docs.docker.com/engine/tutorials/dockervolumes/#adding-a-data-volume). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
--	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume). This places the database files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
+-	Let Docker manage the storage of your database data [by writing the database files to disk on the host system using its own internal volume management](https://docs.docker.com/storage/volumes/). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
+-	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/storage/bind-mounts/). This places the database files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
 
 The Docker documentation is a good starting point for understanding the different storage options and variations, and there are multiple blogs and forum postings that discuss and give advice in this area. We will simply show the basic procedure here for the latter option above:
 

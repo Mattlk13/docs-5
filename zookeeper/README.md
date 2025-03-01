@@ -20,21 +20,21 @@ WARNING:
 	[the Docker Community](https://github.com/31z4/zookeeper-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.5.9`, `3.5`](https://github.com/31z4/zookeeper-docker/blob/10a34d67458bd30a4f334166860d8213f84e97a7/3.5.9/Dockerfile)
--	[`3.6.3`, `3.6`](https://github.com/31z4/zookeeper-docker/blob/10a34d67458bd30a4f334166860d8213f84e97a7/3.6.3/Dockerfile)
--	[`3.7.0`, `3.7`, `latest`](https://github.com/31z4/zookeeper-docker/blob/10a34d67458bd30a4f334166860d8213f84e97a7/3.7.0/Dockerfile)
+-	[`3.8.4`, `3.8`, `3.8.4-jre-17`, `3.8-jre-17`](https://github.com/31z4/zookeeper-docker/blob/ec1050affd761a7886c1f1f5d18165c19d3143e8/3.8.4/Dockerfile)
+
+-	[`3.9.3`, `3.9`, `3.9.3-jre-17`, `3.9-jre-17`, `latest`](https://github.com/31z4/zookeeper-docker/blob/268d33caa089426f4f173ba0bac9277919f88dc7/3.9.3/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/31z4/zookeeper-docker/issues](https://github.com/31z4/zookeeper-docker/issues)
+	[https://github.com/31z4/zookeeper-docker/issues](https://github.com/31z4/zookeeper-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/zookeeper/), [`arm64v8`](https://hub.docker.com/r/arm64v8/zookeeper/)
+	[`amd64`](https://hub.docker.com/r/amd64/zookeeper/), [`arm64v8`](https://hub.docker.com/r/arm64v8/zookeeper/), [`ppc64le`](https://hub.docker.com/r/ppc64le/zookeeper/), [`s390x`](https://hub.docker.com/r/s390x/zookeeper/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/zookeeper/` directory](https://github.com/docker-library/repo-info/blob/master/repos/zookeeper) ([history](https://github.com/docker-library/repo-info/commits/master/repos/zookeeper))  
@@ -77,9 +77,9 @@ $ docker run --name some-app --link some-zookeeper:zookeeper -d application-that
 $ docker run -it --rm --link some-zookeeper:zookeeper zookeeper zkCli.sh -server zookeeper
 ```
 
-## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+## ... via [`docker-compose`](https://github.com/docker/compose) or [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/)
 
-Example `stack.yml` for `zookeeper`:
+Example `docker-compose.yml` for `zookeeper`:
 
 ```yaml
 version: '3.1'
@@ -240,15 +240,23 @@ This image is configured with volumes at `/data` and `/datalog` to hold the Zook
 
 ## How to configure logging
 
-By default, ZooKeeper redirects stdout/stderr outputs to the console. You can redirect to a file located in `/logs` by passing environment variable `ZOO_LOG4J_PROP` as follows:
+By default, ZooKeeper redirects stdout/stderr outputs to the console. Since 3.8 ZooKeeper is shipped with [LOGBack](https://logback.qos.ch/) as the logging backend. The ZooKeeper default `logback.xml` file resides in the `/conf` directory. To override default logging configuration mount your custom config as a volume:
+
+```console
+$ docker run --name some-zookeeper --restart always -d -v $(pwd)/logback.xml:/conf/logback.xml zookeeper
+```
+
+Check [ZooKeeper Logging](https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_logging) for more details.
+
+### Logging in 3.7
+
+You can redirect to a file located in `/logs` by passing environment variable `ZOO_LOG4J_PROP` as follows:
 
 ```console
 $ docker run --name some-zookeeper --restart always -e ZOO_LOG4J_PROP="INFO,ROLLINGFILE" zookeeper
 ```
 
-This will write logs to `/logs/zookeeper.log`. Check [ZooKeeper Logging](https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_logging) for more details.
-
-This image is configured with a volume at `/logs` for your convenience.
+This will write logs to `/logs/zookeeper.log`. This image is configured with a volume at `/logs` for your convenience.
 
 # License
 

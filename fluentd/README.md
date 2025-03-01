@@ -20,17 +20,22 @@ WARNING:
 	[Fluentd](https://github.com/fluent/fluentd-docker-image)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v1.14.0-1.0`, `v1.14-1`, `latest`](https://github.com/fluent/fluentd-docker-image/blob/a9e4cee765c7aaf7876d6fe3282aa565dbcdc2a4/v1.14/alpine/Dockerfile)
--	[`v1.14.0-debian-1.0`, `v1.14-debian-1`](https://github.com/fluent/fluentd-docker-image/blob/a9e4cee765c7aaf7876d6fe3282aa565dbcdc2a4/v1.14/debian/Dockerfile)
+-	[`v1.16.7-1.0`, `v1.16-1`](https://github.com/fluent/fluentd-docker-image/blob/295ba669ac33fc7c997cd2643351cef31c2845b7/v1.16/alpine/Dockerfile)
+
+-	[`v1.16.7-debian-1.0`, `v1.16-debian-1`](https://github.com/fluent/fluentd-docker-image/blob/295ba669ac33fc7c997cd2643351cef31c2845b7/v1.16/debian/Dockerfile)
+
+-	[`v1.18.0-1.0`, `v1.18-1`, `latest`](https://github.com/fluent/fluentd-docker-image/blob/0c3c82df3ec08a46ba346e53c4644cfc667dc703/v1.18/alpine/Dockerfile)
+
+-	[`v1.18.0-debian-1.0`, `v1.18-debian-1`](https://github.com/fluent/fluentd-docker-image/blob/0c3c82df3ec08a46ba346e53c4644cfc667dc703/v1.18/debian/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/fluent/fluentd-docker-image/issues](https://github.com/fluent/fluentd-docker-image/issues)
+	[https://github.com/fluent/fluentd-docker-image/issues](https://github.com/fluent/fluentd-docker-image/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/fluentd/), [`arm32v5`](https://hub.docker.com/r/arm32v5/fluentd/), [`arm32v6`](https://hub.docker.com/r/arm32v6/fluentd/), [`arm32v7`](https://hub.docker.com/r/arm32v7/fluentd/), [`arm64v8`](https://hub.docker.com/r/arm64v8/fluentd/), [`i386`](https://hub.docker.com/r/i386/fluentd/), [`ppc64le`](https://hub.docker.com/r/ppc64le/fluentd/), [`s390x`](https://hub.docker.com/r/s390x/fluentd/)

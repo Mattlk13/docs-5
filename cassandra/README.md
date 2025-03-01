@@ -20,21 +20,27 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/cassandra)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0.3`, `4.0`, `4`, `latest`](https://github.com/docker-library/cassandra/blob/ac4975fcd60b47291ca4772d8cce8047f10674b4/4.0/Dockerfile)
--	[`3.11.12`, `3.11`, `3`](https://github.com/docker-library/cassandra/blob/70ecd6c8d9ef280b967db295e1ee3463b7a08ed2/3.11/Dockerfile)
--	[`3.0.26`, `3.0`](https://github.com/docker-library/cassandra/blob/4514513f79f99f5c57184b57a42171ef3e5f7984/3.0/Dockerfile)
+-	[`5.0.3`, `5.0`, `5`, `latest`, `5.0.3-jammy`, `5.0-jammy`, `5-jammy`, `jammy`](https://github.com/docker-library/cassandra/blob/105daf8445a12fc96ef48a1314566e0f61f473b2/5.0/Dockerfile)
+
+-	[`4.1.8`, `4.1`, `4`, `4.1.8-jammy`, `4.1-jammy`, `4-jammy`](https://github.com/docker-library/cassandra/blob/f49e80e172f29e2cad0a9acd054806d9709a4205/4.1/Dockerfile)
+
+-	[`4.0.17`, `4.0`, `4.0.17-jammy`, `4.0-jammy`](https://github.com/docker-library/cassandra/blob/8b58b84f373e48382e49d59acd0b544b33b2c034/4.0/Dockerfile)
+
+-	[`3.11.19`, `3.11`, `3`, `3.11.19-jammy`, `3.11-jammy`, `3-jammy`](https://github.com/docker-library/cassandra/blob/011007d5b4f1b8e73835366ebb0a85ee89c29436/3.11/Dockerfile)
+
+-	[`3.0.32`, `3.0`, `3.0.32-jammy`, `3.0-jammy`](https://github.com/docker-library/cassandra/blob/d47ed59f99316e94a333126a10db20a440d4642d/3.0/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/cassandra/issues](https://github.com/docker-library/cassandra/issues)
+	[https://github.com/docker-library/cassandra/issues](https://github.com/docker-library/cassandra/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm32v7`](https://hub.docker.com/r/arm32v7/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/)
+	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm32v7`](https://hub.docker.com/r/arm32v7/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/), [`s390x`](https://hub.docker.com/r/s390x/cassandra/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/cassandra/` directory](https://github.com/docker-library/repo-info/blob/master/repos/cassandra) ([history](https://github.com/docker-library/repo-info/commits/master/repos/cassandra))  
@@ -129,7 +135,7 @@ There are a small number of environment variables supported by the image which w
 
 -	`CASSANDRA_START_RPC`: This variable is for controlling if the thrift rpc server is started. It will set the [`start_rpc`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__start_rpc) option in `cassandra.yaml`.
 
--	`CASSANDRA_SEEDS`: This variable is the comma-separated list of IP addresses used by gossip for bootstrapping new nodes joining a cluster. It will set the `seeds` value of the [`seed_provider`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__seed_provider) option in `cassandra.yaml`. The `CASSANDRA_BROADCAST_ADDRESS` will be added the the seeds passed in so that the server will talk to itself as well.
+-	`CASSANDRA_SEEDS`: This variable is the comma-separated list of IP addresses used by gossip for bootstrapping new nodes joining a cluster. It will set the `seeds` value of the [`seed_provider`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__seed_provider) option in `cassandra.yaml`. The `CASSANDRA_BROADCAST_ADDRESS` will be added the seeds passed in so that the server will talk to itself as well.
 
 -	`CASSANDRA_CLUSTER_NAME`: This variable sets the name of the cluster and must be the same for all nodes in the cluster. It will set the [`cluster_name`](http://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html?scroll=configCassandra_yaml__cluster_name) option of `cassandra.yaml`.
 
@@ -147,8 +153,8 @@ There are a small number of environment variables supported by the image which w
 
 Important note: There are several ways to store data used by applications that run in Docker containers. We encourage users of the `cassandra` images to familiarize themselves with the options available, including:
 
--	Let Docker manage the storage of your database data [by writing the database files to disk on the host system using its own internal volume management](https://docs.docker.com/engine/tutorials/dockervolumes/#adding-a-data-volume). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
--	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume). This places the database files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
+-	Let Docker manage the storage of your database data [by writing the database files to disk on the host system using its own internal volume management](https://docs.docker.com/storage/volumes/). This is the default and is easy and fairly transparent to the user. The downside is that the files may be hard to locate for tools and applications that run directly on the host system, i.e. outside containers.
+-	Create a data directory on the host system (outside the container) and [mount this to a directory visible from inside the container](https://docs.docker.com/storage/bind-mounts/). This places the database files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files. The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
 
 The Docker documentation is a good starting point for understanding the different storage options and variations, and there are multiple blogs and forum postings that discuss and give advice in this area. We will simply show the basic procedure here for the latter option above:
 
@@ -163,7 +169,7 @@ The `-v /my/own/datadir:/var/lib/cassandra` part of the command mounts the `/my/
 
 ## No connections until Cassandra init completes
 
-If there is no database initialized when the container starts, then a default database will be created. While this is the expected behavior, this means that it will not accept incoming connections until such initialization completes. This may cause issues when using automation tools, such as `docker-compose`, which start several containers simultaneously.
+If there is no database initialized when the container starts, then a default database will be created. While this is the expected behavior, this means that it will not accept incoming connections until such initialization completes. This may cause issues when using automation tools, such as Docker Compose, which start several containers simultaneously.
 
 # License
 

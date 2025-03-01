@@ -20,23 +20,33 @@ WARNING:
 	[the Traefik Project](https://github.com/traefik/traefik-library-image)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v2.6.1-windowsservercore-1809`, `2.6.1-windowsservercore-1809`, `v2.6-windowsservercore-1809`, `2.6-windowsservercore-1809`, `rocamadour-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/19b29d4858c12d74647d59214e0a9417646343ca/windows/1809/Dockerfile)
--	[`v2.6.1`, `2.6.1`, `v2.6`, `2.6`, `rocamadour`, `latest`](https://github.com/traefik/traefik-library-image/blob/19b29d4858c12d74647d59214e0a9417646343ca/alpine/Dockerfile)
--	[`v1.7.34-windowsservercore-1809`, `1.7.34-windowsservercore-1809`, `v1.7-windowsservercore-1809`, `1.7-windowsservercore-1809`, `maroilles-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/windows/1809/Dockerfile)
--	[`v1.7.34-alpine`, `1.7.34-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/alpine/Dockerfile)
--	[`v1.7.34`, `1.7.34`, `v1.7`, `1.7`, `maroilles`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/scratch/Dockerfile)
+-	[`v3.3.4-windowsservercore-ltsc2022`, `3.3.4-windowsservercore-ltsc2022`, `v3.3-windowsservercore-ltsc2022`, `3.3-windowsservercore-ltsc2022`, `v3-windowsservercore-ltsc2022`, `3-windowsservercore-ltsc2022`, `saintnectaire-windowsservercore-ltsc2022`, `windowsservercore-ltsc2022`](https://github.com/traefik/traefik-library-image/blob/dbb14d16f565c6b98affe491254d95cee5fc92e9/v3.3/windows/servercore-ltsc2022/Dockerfile)
+
+-	[`v3.3.4-windowsservercore-1809`, `3.3.4-windowsservercore-1809`, `v3.3-windowsservercore-1809`, `3.3-windowsservercore-1809`, `v3-windowsservercore-1809`, `3-windowsservercore-1809`, `saintnectaire-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/dbb14d16f565c6b98affe491254d95cee5fc92e9/v3.3/windows/1809/Dockerfile)
+
+-	[`v3.3.4-nanoserver-ltsc2022`, `3.3.4-nanoserver-ltsc2022`, `v3.3-nanoserver-ltsc2022`, `3.3-nanoserver-ltsc2022`, `v3-nanoserver-ltsc2022`, `3-nanoserver-ltsc2022`, `saintnectaire-nanoserver-ltsc2022`, `nanoserver-ltsc2022`](https://github.com/traefik/traefik-library-image/blob/dbb14d16f565c6b98affe491254d95cee5fc92e9/v3.3/windows/nanoserver-ltsc2022/Dockerfile)
+
+-	[`v3.3.4`, `3.3.4`, `v3.3`, `3.3`, `v3`, `3`, `saintnectaire`, `latest`](https://github.com/traefik/traefik-library-image/blob/dbb14d16f565c6b98affe491254d95cee5fc92e9/v3.3/alpine/Dockerfile)
+
+-	[`v2.11.21-windowsservercore-ltsc2022`, `2.11.21-windowsservercore-ltsc2022`, `v2.11-windowsservercore-ltsc2022`, `2.11-windowsservercore-ltsc2022`, `v2-windowsservercore-ltsc2022`, `2-windowsservercore-ltsc2022`, `mimolette-windowsservercore-ltsc2022`](https://github.com/traefik/traefik-library-image/blob/747eab3667642ee3da6ac90ee18883d01d52ada8/v2.11/windows/servercore-ltsc2022/Dockerfile)
+
+-	[`v2.11.21-windowsservercore-1809`, `2.11.21-windowsservercore-1809`, `v2.11-windowsservercore-1809`, `2.11-windowsservercore-1809`, `v2-windowsservercore-1809`, `2-windowsservercore-1809`, `mimolette-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/747eab3667642ee3da6ac90ee18883d01d52ada8/v2.11/windows/1809/Dockerfile)
+
+-	[`v2.11.21-nanoserver-ltsc2022`, `2.11.21-nanoserver-ltsc2022`, `v2.11-nanoserver-ltsc2022`, `2.11-nanoserver-ltsc2022`, `v2-nanoserver-ltsc2022`, `2-nanoserver-ltsc2022`, `mimolette-nanoserver-ltsc2022`](https://github.com/traefik/traefik-library-image/blob/747eab3667642ee3da6ac90ee18883d01d52ada8/v2.11/windows/nanoserver-ltsc2022/Dockerfile)
+
+-	[`v2.11.21`, `2.11.21`, `v2.11`, `2.11`, `v2`, `2`, `mimolette`](https://github.com/traefik/traefik-library-image/blob/747eab3667642ee3da6ac90ee18883d01d52ada8/v2.11/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/traefik/traefik-library-image/issues](https://github.com/traefik/traefik-library-image/issues)
+	[https://github.com/traefik/traefik-library-image/issues](https://github.com/traefik/traefik-library-image/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)
+	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`ppc64le`](https://hub.docker.com/r/ppc64le/traefik/), [`riscv64`](https://hub.docker.com/r/riscv64/traefik/), [`s390x`](https://hub.docker.com/r/s390x/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/traefik/` directory](https://github.com/docker-library/repo-info/blob/master/repos/traefik) ([history](https://github.com/docker-library/repo-info/commits/master/repos/traefik))  
@@ -51,15 +61,15 @@ WARNING:
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/a6cc2c5f4bc6658168f2a0abbb0307acaefff80e/traefik/logo.png)
 
-[Traefik](https://traefik.io) is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
+[Traefik](https://traefik.io) is a modern HTTP reverse proxy and ingress controller that makes deploying microservices easy.
 
-Traefik integrates with your existing infrastructure components ([Docker](https://www.docker.com/), [Swarm mode](https://docs.docker.com/engine/swarm/), [Kubernetes](https://kubernetes.io), [Marathon](https://mesosphere.github.io/marathon/), [Consul](https://www.consul.io/), [Etcd](https://coreos.com/etcd/), [Rancher](https://rancher.com), [Amazon ECS](https://aws.amazon.com/ecs), ...) and configures itself automatically and dynamically.
+Traefik integrates with your existing infrastructure components ([Kubernetes](https://kubernetes.io), [Docker](https://www.docker.com/), [Swarm](https://docs.docker.com/engine/swarm/), [Consul](https://www.consul.io/), [Nomad](https://www.nomadproject.io/), [etcd](https://coreos.com/etcd/), [Amazon ECS](https://aws.amazon.com/ecs), ...) and configures itself automatically and dynamically.
 
 Pointing Traefik at your orchestrator should be the *only* configuration step you need.
 
-# Traefik v2 - Example usage
+## Traefik v3 - Example usage
 
-Enable `docker` provider and web UI:
+Enable `docker` provider and dashboard UI:
 
 ```yml
 ## traefik.yml
@@ -74,25 +84,84 @@ api:
   insecure: true
 ```
 
-Start Traefik:
+Start Traefik v3:
 
-```bash
+```sh
 docker run -d -p 8080:8080 -p 80:80 \
--v $PWD/traefik.yml:/etc/traefik/traefik.yml \
--v /var/run/docker.sock:/var/run/docker.sock \
-traefik:v2.5
+  -v $PWD/traefik.yml:/etc/traefik/traefik.yml \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  traefik:v3
 ```
 
-Start a backend server, named `test`:
+Start a backend server using the `traefik/whoami` image:
 
-```bash
+```sh
 docker run -d --name test traefik/whoami
 ```
 
-And finally, you can access to your `whoami` server throught Traefik, on the domain name `test.docker.localhost`:
+Access the whoami service through Traefik via the defined rule `test.docker.localhost`:
 
 ```console
-# $ curl --header 'Host:test.docker.localhost' 'http://localhost:80/'
+$ curl test.docker.localhost
+Hostname: 0693100b16de
+IP: 127.0.0.1
+IP: ::1
+IP: 192.168.215.4
+RemoteAddr: 192.168.215.3:57618
+GET / HTTP/1.1
+Host: test.docker.localhost
+User-Agent: curl/8.7.1
+Accept: */*
+Accept-Encoding: gzip
+X-Forwarded-For: 192.168.215.1
+X-Forwarded-Host: test.docker.localhost
+X-Forwarded-Port: 80
+X-Forwarded-Proto: http
+X-Forwarded-Server: 8a37fd4f35fb
+X-Real-Ip: 192.168.215.1
+```
+
+Access the Traefik Dashboard:
+
+Open your web browser and navigate to `http://localhost:8080` to access the Traefik dashboard. This will provide an overview of routers, services, and middlewares.
+
+![Dashboard UI](https://raw.githubusercontent.com/traefik/traefik/v3.2/docs/content/assets/img/webui-dashboard.png)
+
+## Traefik v2 - Example usage
+
+Enable `docker` provider and dashboard UI:
+
+```yml
+## traefik.yml
+
+# Docker configuration backend
+providers:
+  docker:
+    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
+
+# API and dashboard configuration
+api:
+  insecure: true
+```
+
+Start Traefik v2:
+
+```sh
+docker run -d -p 8080:8080 -p 80:80 \
+-v $PWD/traefik.yml:/etc/traefik/traefik.yml \
+-v /var/run/docker.sock:/var/run/docker.sock \
+traefik:v2.11
+```
+
+Start a backend server using the `traefik/whoami` image:
+
+```sh
+docker run -d --name test traefik/whoami
+```
+
+Access the whoami service through Traefik via the defined rule `test.docker.localhost`:
+
+```console
 $ curl test.docker.localhost
 Hostname: 390a880bdfab
 IP: 127.0.0.1
@@ -110,75 +179,20 @@ X-Forwarded-Server: 7e073cb54211
 X-Real-Ip: 172.17.0.1
 ```
 
-The web UI [http://localhost:8080](http://localhost:8080) will give you an overview of the routers, services, and middlewares.
+Access the Traefik Dashboard:
 
-![Web UI](https://raw.githubusercontent.com/traefik/traefik/v2.5/docs/content/assets/img/webui-dashboard.png)
+Open your web browser and navigate to `http://localhost:8080` to access the Traefik dashboard. This will provide an overview of routers, services, and middlewares.
 
-# Traefik v1 - Example usage
+![Dashboard UI](https://raw.githubusercontent.com/traefik/traefik/v2.0/docs/content/assets/img/webui-dashboard.png)
 
-Grab a [sample configuration file](https://raw.githubusercontent.com/traefik/traefik/v1.7/traefik.sample.toml) and rename it to `traefik.toml`. Enable `docker` provider and web UI:
-
-```toml
-## traefik.toml
-
-# API and dashboard configuration
-[api]
-
-# Docker configuration backend
-[docker]
-  domain = "docker.localhost"
-```
-
-Start Traefik:
-
-```bash
-docker run -d -p 8080:8080 -p 80:80 \
--v $PWD/traefik.toml:/etc/traefik/traefik.toml \
--v /var/run/docker.sock:/var/run/docker.sock \
-traefik:v1.7
-```
-
-Start a backend server, named `test`:
-
-```bash
-docker run -d --name test traefik/whoami
-```
-
-And finally, you can access to your `whoami` server throught Traefik, on the domain name `{containerName}.{configuredDomain}` (`test.docker.localhost`):
-
-```console
-# $ curl --header 'Host:test.docker.localhost' 'http://localhost:80/'
-$ curl 'http://test.docker.localhost'
-Hostname: 117c5530934d
-IP: 127.0.0.1
-IP: ::1
-IP: 172.17.0.3
-IP: fe80::42:acff:fe11:3
-GET / HTTP/1.1
-Host: test.docker.localhost
-User-Agent: curl/7.35.0
-Accept: */*
-Accept-Encoding: gzip
-X-Forwarded-For: 172.17.0.1
-X-Forwarded-Host: 172.17.0.3:80
-X-Forwarded-Proto: http
-X-Forwarded-Server: f2e05c433120
-```
-
-The web UI [http://localhost:8080](http://localhost:8080) will give you an overview of the frontends/backends and also a health dashboard.
-
-![Web UI Providers](https://raw.githubusercontent.com/traefik/traefik/v1.7/docs/img/web.frontend.png)
-
-# Documentation
+## Documentation
 
 You can find the complete documentation:
 
--	for [v2.x](https://doc.traefik.io/traefik/)
--	for [v1.7](https://doc.traefik.io/traefik/v1.7)
+-	for [v3.x](https://doc.traefik.io/traefik/)
+-	for [v2.11](https://doc.traefik.io/traefik/v2.11)
 
 A community support is available at [https://community.traefik.io](https://community.traefik.io)
-
-A collection of contributions around Traefik can be found at [https://awesome.traefik.io](https://awesome.traefik.io).
 
 # Image Variants
 

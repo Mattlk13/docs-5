@@ -20,20 +20,21 @@ WARNING:
 	[Tim Düsterhus (of the Docker Community)](https://github.com/TimWolla/docker-adminer)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.8.1-standalone`, `4-standalone`, `standalone`, `4.8.1`, `4`, `latest`](https://github.com/TimWolla/docker-adminer/blob/655a0ba9445f62ee494bfe35be93e6730e7576af/4/Dockerfile)
--	[`4.8.1-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/655a0ba9445f62ee494bfe35be93e6730e7576af/4/fastcgi/Dockerfile)
+-	[`4.17.1`, `4`, `latest`, `4.17.1-standalone`, `4-standalone`, `standalone`](https://github.com/TimWolla/docker-adminer/blob/0c0fd187e8646ad61fe592a80d66abec2c1dc951/4/Dockerfile)
+
+-	[`4.17.1-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/0c0fd187e8646ad61fe592a80d66abec2c1dc951/4/fastcgi/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/TimWolla/docker-adminer/issues](https://github.com/TimWolla/docker-adminer/issues)
+	[https://github.com/TimWolla/docker-adminer/issues](https://github.com/TimWolla/docker-adminer/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/adminer/), [`arm32v6`](https://hub.docker.com/r/arm32v6/adminer/), [`arm32v7`](https://hub.docker.com/r/arm32v7/adminer/), [`arm64v8`](https://hub.docker.com/r/arm64v8/adminer/), [`i386`](https://hub.docker.com/r/i386/adminer/), [`ppc64le`](https://hub.docker.com/r/ppc64le/adminer/), [`s390x`](https://hub.docker.com/r/s390x/adminer/)
+	[`amd64`](https://hub.docker.com/r/amd64/adminer/), [`arm32v6`](https://hub.docker.com/r/arm32v6/adminer/), [`arm32v7`](https://hub.docker.com/r/arm32v7/adminer/), [`arm64v8`](https://hub.docker.com/r/arm64v8/adminer/), [`i386`](https://hub.docker.com/r/i386/adminer/), [`ppc64le`](https://hub.docker.com/r/ppc64le/adminer/), [`riscv64`](https://hub.docker.com/r/riscv64/adminer/), [`s390x`](https://hub.docker.com/r/s390x/adminer/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/adminer/` directory](https://github.com/docker-library/repo-info/blob/master/repos/adminer) ([history](https://github.com/docker-library/repo-info/commits/master/repos/adminer))  
@@ -78,9 +79,9 @@ Then point your web server to port 9000 of the container.
 
 Note: This exposes the FastCGI socket to the Internet. Make sure to add proper firewall rules or use a private Docker network instead to prevent a direct access.
 
-### ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+### ... via [`docker-compose`](https://github.com/docker/compose) or [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/)
 
-Example `stack.yml` for `adminer`:
+Example `docker-compose.yml` for `adminer`:
 
 ```yaml
 # Use root/example as user/password credentials
@@ -177,7 +178,7 @@ To add support for the other drivers you will need to install the following PHP 
 
 # License
 
-View [license information](https://github.com/vrana/adminer/blob/master/readme.txt) for the software contained in this image.
+View [license information](https://github.com/vrana/adminer/blob/master/LICENSE) for the software contained in this image.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
